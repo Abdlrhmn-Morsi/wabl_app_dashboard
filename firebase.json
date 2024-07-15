@@ -1,0 +1,1 @@
+{"flutter":{"platforms":{"android":{"default":{"projectId":"wabl-app","appId":"1:1045693624414:android:9088c3dffbc9c2490a84cf","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"wabl-app","configurations":{"android":"1:1045693624414:android:9088c3dffbc9c2490a84cf","ios":"1:1045693624414:ios:a04a62d3754c8a740a84cf"}}}}}}

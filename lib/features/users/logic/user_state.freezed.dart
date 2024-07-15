@@ -1,0 +1,1344 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+part of 'user_state.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+
+/// @nodoc
+mixin _$UserState<T> {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String message) error,
+    required TResult Function() updateLoading,
+    required TResult Function(T data) updateSuccess,
+    required TResult Function(String message) updateError,
+    required TResult Function() pagination,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? updateLoading,
+    TResult? Function(T data)? updateSuccess,
+    TResult? Function(String message)? updateError,
+    TResult? Function()? pagination,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String message)? error,
+    TResult Function()? updateLoading,
+    TResult Function(T data)? updateSuccess,
+    TResult Function(String message)? updateError,
+    TResult Function()? pagination,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
+    required TResult Function(Pagination<T> value) pagination,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
+    TResult? Function(Pagination<T> value)? pagination,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
+    TResult Function(Pagination<T> value)? pagination,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UserStateCopyWith<T, $Res> {
+  factory $UserStateCopyWith(
+          UserState<T> value, $Res Function(UserState<T>) then) =
+      _$UserStateCopyWithImpl<T, $Res, UserState<T>>;
+}
+
+/// @nodoc
+class _$UserStateCopyWithImpl<T, $Res, $Val extends UserState<T>>
+    implements $UserStateCopyWith<T, $Res> {
+  _$UserStateCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$InitialImplCopyWith<T, $Res> {
+  factory _$$InitialImplCopyWith(
+          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+      __$$InitialImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$InitialImplCopyWithImpl<T, $Res>
+    extends _$UserStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
+    implements _$$InitialImplCopyWith<T, $Res> {
+  __$$InitialImplCopyWithImpl(
+      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$InitialImpl<T> implements _Initial<T> {
+  const _$InitialImpl();
+
+  @override
+  String toString() {
+    return 'UserState<$T>.initial()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InitialImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String message) error,
+    required TResult Function() updateLoading,
+    required TResult Function(T data) updateSuccess,
+    required TResult Function(String message) updateError,
+    required TResult Function() pagination,
+  }) {
+    return initial();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? updateLoading,
+    TResult? Function(T data)? updateSuccess,
+    TResult? Function(String message)? updateError,
+    TResult? Function()? pagination,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String message)? error,
+    TResult Function()? updateLoading,
+    TResult Function(T data)? updateSuccess,
+    TResult Function(String message)? updateError,
+    TResult Function()? pagination,
+    required TResult orElse(),
+  }) {
+    if (initial != null) {
+      return initial();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
+    required TResult Function(Pagination<T> value) pagination,
+  }) {
+    return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
+    TResult? Function(Pagination<T> value)? pagination,
+  }) {
+    return initial?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
+    TResult Function(Pagination<T> value)? pagination,
+    required TResult orElse(),
+  }) {
+    if (initial != null) {
+      return initial(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Initial<T> implements UserState<T> {
+  const factory _Initial() = _$InitialImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$LoadingImplCopyWith<T, $Res> {
+  factory _$$LoadingImplCopyWith(
+          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+      __$$LoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$LoadingImplCopyWithImpl<T, $Res>
+    extends _$UserStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
+    implements _$$LoadingImplCopyWith<T, $Res> {
+  __$$LoadingImplCopyWithImpl(
+      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadingImpl<T> implements Loading<T> {
+  const _$LoadingImpl();
+
+  @override
+  String toString() {
+    return 'UserState<$T>.loading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String message) error,
+    required TResult Function() updateLoading,
+    required TResult Function(T data) updateSuccess,
+    required TResult Function(String message) updateError,
+    required TResult Function() pagination,
+  }) {
+    return loading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? updateLoading,
+    TResult? Function(T data)? updateSuccess,
+    TResult? Function(String message)? updateError,
+    TResult? Function()? pagination,
+  }) {
+    return loading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String message)? error,
+    TResult Function()? updateLoading,
+    TResult Function(T data)? updateSuccess,
+    TResult Function(String message)? updateError,
+    TResult Function()? pagination,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
+    required TResult Function(Pagination<T> value) pagination,
+  }) {
+    return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
+    TResult? Function(Pagination<T> value)? pagination,
+  }) {
+    return loading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
+    TResult Function(Pagination<T> value)? pagination,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Loading<T> implements UserState<T> {
+  const factory Loading() = _$LoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$SuccessImplCopyWith<T, $Res> {
+  factory _$$SuccessImplCopyWith(
+          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+      __$$SuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T data});
+}
+
+/// @nodoc
+class __$$SuccessImplCopyWithImpl<T, $Res>
+    extends _$UserStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
+    implements _$$SuccessImplCopyWith<T, $Res> {
+  __$$SuccessImplCopyWithImpl(
+      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$SuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SuccessImpl<T> implements Success<T> {
+  const _$SuccessImpl(this.data);
+
+  @override
+  final T data;
+
+  @override
+  String toString() {
+    return 'UserState<$T>.success(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
+      __$$SuccessImplCopyWithImpl<T, _$SuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String message) error,
+    required TResult Function() updateLoading,
+    required TResult Function(T data) updateSuccess,
+    required TResult Function(String message) updateError,
+    required TResult Function() pagination,
+  }) {
+    return success(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? updateLoading,
+    TResult? Function(T data)? updateSuccess,
+    TResult? Function(String message)? updateError,
+    TResult? Function()? pagination,
+  }) {
+    return success?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String message)? error,
+    TResult Function()? updateLoading,
+    TResult Function(T data)? updateSuccess,
+    TResult Function(String message)? updateError,
+    TResult Function()? pagination,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
+    required TResult Function(Pagination<T> value) pagination,
+  }) {
+    return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
+    TResult? Function(Pagination<T> value)? pagination,
+  }) {
+    return success?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
+    TResult Function(Pagination<T> value)? pagination,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Success<T> implements UserState<T> {
+  const factory Success(final T data) = _$SuccessImpl<T>;
+
+  T get data;
+  @JsonKey(ignore: true)
+  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ErrorImplCopyWith<T, $Res> {
+  factory _$$ErrorImplCopyWith(
+          _$ErrorImpl<T> value, $Res Function(_$ErrorImpl<T>) then) =
+      __$$ErrorImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$ErrorImplCopyWithImpl<T, $Res>
+    extends _$UserStateCopyWithImpl<T, $Res, _$ErrorImpl<T>>
+    implements _$$ErrorImplCopyWith<T, $Res> {
+  __$$ErrorImplCopyWithImpl(
+      _$ErrorImpl<T> _value, $Res Function(_$ErrorImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$ErrorImpl<T>(
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ErrorImpl<T> implements Error<T> {
+  const _$ErrorImpl({required this.message});
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'UserState<$T>.error(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorImpl<T> &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ErrorImplCopyWith<T, _$ErrorImpl<T>> get copyWith =>
+      __$$ErrorImplCopyWithImpl<T, _$ErrorImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String message) error,
+    required TResult Function() updateLoading,
+    required TResult Function(T data) updateSuccess,
+    required TResult Function(String message) updateError,
+    required TResult Function() pagination,
+  }) {
+    return error(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? updateLoading,
+    TResult? Function(T data)? updateSuccess,
+    TResult? Function(String message)? updateError,
+    TResult? Function()? pagination,
+  }) {
+    return error?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String message)? error,
+    TResult Function()? updateLoading,
+    TResult Function(T data)? updateSuccess,
+    TResult Function(String message)? updateError,
+    TResult Function()? pagination,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
+    required TResult Function(Pagination<T> value) pagination,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
+    TResult? Function(Pagination<T> value)? pagination,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
+    TResult Function(Pagination<T> value)? pagination,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Error<T> implements UserState<T> {
+  const factory Error({required final String message}) = _$ErrorImpl<T>;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$ErrorImplCopyWith<T, _$ErrorImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateLoadingImplCopyWith<T, $Res> {
+  factory _$$UpdateLoadingImplCopyWith(_$UpdateLoadingImpl<T> value,
+          $Res Function(_$UpdateLoadingImpl<T>) then) =
+      __$$UpdateLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$UpdateLoadingImplCopyWithImpl<T, $Res>
+    extends _$UserStateCopyWithImpl<T, $Res, _$UpdateLoadingImpl<T>>
+    implements _$$UpdateLoadingImplCopyWith<T, $Res> {
+  __$$UpdateLoadingImplCopyWithImpl(_$UpdateLoadingImpl<T> _value,
+      $Res Function(_$UpdateLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UpdateLoadingImpl<T> implements UpdateLoading<T> {
+  const _$UpdateLoadingImpl();
+
+  @override
+  String toString() {
+    return 'UserState<$T>.updateLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UpdateLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String message) error,
+    required TResult Function() updateLoading,
+    required TResult Function(T data) updateSuccess,
+    required TResult Function(String message) updateError,
+    required TResult Function() pagination,
+  }) {
+    return updateLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? updateLoading,
+    TResult? Function(T data)? updateSuccess,
+    TResult? Function(String message)? updateError,
+    TResult? Function()? pagination,
+  }) {
+    return updateLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String message)? error,
+    TResult Function()? updateLoading,
+    TResult Function(T data)? updateSuccess,
+    TResult Function(String message)? updateError,
+    TResult Function()? pagination,
+    required TResult orElse(),
+  }) {
+    if (updateLoading != null) {
+      return updateLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
+    required TResult Function(Pagination<T> value) pagination,
+  }) {
+    return updateLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
+    TResult? Function(Pagination<T> value)? pagination,
+  }) {
+    return updateLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
+    TResult Function(Pagination<T> value)? pagination,
+    required TResult orElse(),
+  }) {
+    if (updateLoading != null) {
+      return updateLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateLoading<T> implements UserState<T> {
+  const factory UpdateLoading() = _$UpdateLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$UpdateSuccessImplCopyWith<T, $Res> {
+  factory _$$UpdateSuccessImplCopyWith(_$UpdateSuccessImpl<T> value,
+          $Res Function(_$UpdateSuccessImpl<T>) then) =
+      __$$UpdateSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T data});
+}
+
+/// @nodoc
+class __$$UpdateSuccessImplCopyWithImpl<T, $Res>
+    extends _$UserStateCopyWithImpl<T, $Res, _$UpdateSuccessImpl<T>>
+    implements _$$UpdateSuccessImplCopyWith<T, $Res> {
+  __$$UpdateSuccessImplCopyWithImpl(_$UpdateSuccessImpl<T> _value,
+      $Res Function(_$UpdateSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$UpdateSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateSuccessImpl<T> implements UpdateSuccess<T> {
+  const _$UpdateSuccessImpl(this.data);
+
+  @override
+  final T data;
+
+  @override
+  String toString() {
+    return 'UserState<$T>.updateSuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateSuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateSuccessImplCopyWith<T, _$UpdateSuccessImpl<T>> get copyWith =>
+      __$$UpdateSuccessImplCopyWithImpl<T, _$UpdateSuccessImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String message) error,
+    required TResult Function() updateLoading,
+    required TResult Function(T data) updateSuccess,
+    required TResult Function(String message) updateError,
+    required TResult Function() pagination,
+  }) {
+    return updateSuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? updateLoading,
+    TResult? Function(T data)? updateSuccess,
+    TResult? Function(String message)? updateError,
+    TResult? Function()? pagination,
+  }) {
+    return updateSuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String message)? error,
+    TResult Function()? updateLoading,
+    TResult Function(T data)? updateSuccess,
+    TResult Function(String message)? updateError,
+    TResult Function()? pagination,
+    required TResult orElse(),
+  }) {
+    if (updateSuccess != null) {
+      return updateSuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
+    required TResult Function(Pagination<T> value) pagination,
+  }) {
+    return updateSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
+    TResult? Function(Pagination<T> value)? pagination,
+  }) {
+    return updateSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
+    TResult Function(Pagination<T> value)? pagination,
+    required TResult orElse(),
+  }) {
+    if (updateSuccess != null) {
+      return updateSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateSuccess<T> implements UserState<T> {
+  const factory UpdateSuccess(final T data) = _$UpdateSuccessImpl<T>;
+
+  T get data;
+  @JsonKey(ignore: true)
+  _$$UpdateSuccessImplCopyWith<T, _$UpdateSuccessImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateErrorImplCopyWith<T, $Res> {
+  factory _$$UpdateErrorImplCopyWith(_$UpdateErrorImpl<T> value,
+          $Res Function(_$UpdateErrorImpl<T>) then) =
+      __$$UpdateErrorImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$UpdateErrorImplCopyWithImpl<T, $Res>
+    extends _$UserStateCopyWithImpl<T, $Res, _$UpdateErrorImpl<T>>
+    implements _$$UpdateErrorImplCopyWith<T, $Res> {
+  __$$UpdateErrorImplCopyWithImpl(
+      _$UpdateErrorImpl<T> _value, $Res Function(_$UpdateErrorImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$UpdateErrorImpl<T>(
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateErrorImpl<T> implements UpdateError<T> {
+  const _$UpdateErrorImpl({required this.message});
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'UserState<$T>.updateError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateErrorImpl<T> &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateErrorImplCopyWith<T, _$UpdateErrorImpl<T>> get copyWith =>
+      __$$UpdateErrorImplCopyWithImpl<T, _$UpdateErrorImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String message) error,
+    required TResult Function() updateLoading,
+    required TResult Function(T data) updateSuccess,
+    required TResult Function(String message) updateError,
+    required TResult Function() pagination,
+  }) {
+    return updateError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? updateLoading,
+    TResult? Function(T data)? updateSuccess,
+    TResult? Function(String message)? updateError,
+    TResult? Function()? pagination,
+  }) {
+    return updateError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String message)? error,
+    TResult Function()? updateLoading,
+    TResult Function(T data)? updateSuccess,
+    TResult Function(String message)? updateError,
+    TResult Function()? pagination,
+    required TResult orElse(),
+  }) {
+    if (updateError != null) {
+      return updateError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
+    required TResult Function(Pagination<T> value) pagination,
+  }) {
+    return updateError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
+    TResult? Function(Pagination<T> value)? pagination,
+  }) {
+    return updateError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
+    TResult Function(Pagination<T> value)? pagination,
+    required TResult orElse(),
+  }) {
+    if (updateError != null) {
+      return updateError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateError<T> implements UserState<T> {
+  const factory UpdateError({required final String message}) =
+      _$UpdateErrorImpl<T>;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$UpdateErrorImplCopyWith<T, _$UpdateErrorImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PaginationImplCopyWith<T, $Res> {
+  factory _$$PaginationImplCopyWith(
+          _$PaginationImpl<T> value, $Res Function(_$PaginationImpl<T>) then) =
+      __$$PaginationImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$PaginationImplCopyWithImpl<T, $Res>
+    extends _$UserStateCopyWithImpl<T, $Res, _$PaginationImpl<T>>
+    implements _$$PaginationImplCopyWith<T, $Res> {
+  __$$PaginationImplCopyWithImpl(
+      _$PaginationImpl<T> _value, $Res Function(_$PaginationImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$PaginationImpl<T> implements Pagination<T> {
+  const _$PaginationImpl();
+
+  @override
+  String toString() {
+    return 'UserState<$T>.pagination()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$PaginationImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T data) success,
+    required TResult Function(String message) error,
+    required TResult Function() updateLoading,
+    required TResult Function(T data) updateSuccess,
+    required TResult Function(String message) updateError,
+    required TResult Function() pagination,
+  }) {
+    return pagination();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T data)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? updateLoading,
+    TResult? Function(T data)? updateSuccess,
+    TResult? Function(String message)? updateError,
+    TResult? Function()? pagination,
+  }) {
+    return pagination?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T data)? success,
+    TResult Function(String message)? error,
+    TResult Function()? updateLoading,
+    TResult Function(T data)? updateSuccess,
+    TResult Function(String message)? updateError,
+    TResult Function()? pagination,
+    required TResult orElse(),
+  }) {
+    if (pagination != null) {
+      return pagination();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
+    required TResult Function(Pagination<T> value) pagination,
+  }) {
+    return pagination(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
+    TResult? Function(Pagination<T> value)? pagination,
+  }) {
+    return pagination?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
+    TResult Function(Pagination<T> value)? pagination,
+    required TResult orElse(),
+  }) {
+    if (pagination != null) {
+      return pagination(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Pagination<T> implements UserState<T> {
+  const factory Pagination() = _$PaginationImpl<T>;
+}
