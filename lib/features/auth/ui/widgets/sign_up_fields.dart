@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/helpers/app_regex.dart';
@@ -21,14 +22,14 @@ class SignUpFields extends StatelessWidget {
           children: [
             AppTextField(
               controller: cubit.nameTEC,
-              hintText: 'full name',
+              hintText: 'full_name'.tr(),
               isNoBorder: true,
               validator: AppRegex.checkFullName,
             ),
             verticalSpace(16),
             AppTextField(
               controller: cubit.emailTEC,
-              hintText: 'Email Address',
+              hintText: 'email'.tr(),
               isNoBorder: true,
               validator: AppRegex.emailValidation,
             ),
@@ -38,7 +39,7 @@ class SignUpFields extends StatelessWidget {
             AppPasswordTextField(
               // autovalidateMode: AutovalidateMode.onUserInteraction,
               controller: cubit.passwordTEC,
-              hintText: 'Password',
+              hintText: 'password'.tr(),
               isNoBorder: true,
               validator: AppRegex.passwordValidation,
             ),
@@ -46,7 +47,7 @@ class SignUpFields extends StatelessWidget {
             AppPasswordTextField(
               //autovalidateMode: AutovalidateMode.onUserInteraction,
               controller: cubit.confirmPasswordTEC,
-              hintText: 'confirm Password',
+              hintText: 'confirm_password'.tr(),
               isNoBorder: true,
               validator: (v) {
                 return AppRegex.confirmationPasswordValidation(

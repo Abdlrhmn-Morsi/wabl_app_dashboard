@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -10,10 +11,10 @@ class AppLogoutAlertMessage {
   static Future<Object?> show({
     required BuildContext context,
     required String message,
+    required String title,
     required Function onSubbmit,
   }) {
     return showGeneralDialog(
-      barrierDismissible: false,
       context: context,
       pageBuilder: (context, animation, secondaryAnimation) {
         return Container();
@@ -53,7 +54,7 @@ class AppLogoutAlertMessage {
                         onSubbmit();
                       },
                       child: Text(
-                        'Log out',
+                        title,
                         style: TextStyles.font14Bold.copyWith(
                           color: Colors.red,
                         ),
@@ -67,7 +68,7 @@ class AppLogoutAlertMessage {
                         context.pop();
                       },
                       child: Text(
-                        'Cancel',
+                        'cancel'.tr(),
                         style: TextStyles.font14Bold,
                       ),
                     ),

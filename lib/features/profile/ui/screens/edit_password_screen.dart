@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/helpers/app_regex.dart';
@@ -54,7 +55,7 @@ class _EditPasswordScreenState extends State<EditPasswordScreen> {
                     children: [
                       Expanded(
                         child: Text(
-                          'Update Your Password',
+                          'update_password'.tr(context: context),
                           maxLines: null,
                           textAlign: TextAlign.start,
                           style: TextStyles.font18Bold,
@@ -66,7 +67,7 @@ class _EditPasswordScreenState extends State<EditPasswordScreen> {
                   AppPasswordTextField(
                     controller: oldPasswordTEC,
                     isNoBorder: true,
-                    hintText: 'Current Password',
+                    hintText: 'current_password'.tr(context: context),
                     validator: AppRegex.passwordValidation,
                   ),
                   verticalSpace(20),
@@ -74,14 +75,14 @@ class _EditPasswordScreenState extends State<EditPasswordScreen> {
                     controller: newPasswordTEC,
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     isNoBorder: true,
-                    hintText: 'New Password',
+                    hintText: 'new_password'.tr(context: context),
                     validator: AppRegex.passwordValidation,
                   ),
                   verticalSpace(20),
                   AppPasswordTextField(
                     controller: newPasswordConfirmationTEC,
                     isNoBorder: true,
-                    hintText: 'Confirm Password',
+                    hintText: 'confirm_password'.tr(context: context),
                     validator: (v) {
                       return AppRegex.confirmationPasswordValidation(
                         password: newPasswordTEC.text,
@@ -94,7 +95,7 @@ class _EditPasswordScreenState extends State<EditPasswordScreen> {
                     verticalPadding: 8,
                     buttonHeight: 40.h,
                     borderRadius: 8.r,
-                    buttonText: 'Update',
+                    buttonText: 'update'.tr(context: context),
                     textStyle: TextStyles.font14Bold,
                     onPressed: () {
                       if (formKey.currentState!.validate()) {

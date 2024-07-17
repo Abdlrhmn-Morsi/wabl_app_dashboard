@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,7 +20,7 @@ class _DarkModeSwitchState extends State<DarkModeSwitch> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          'Dark mode',
+          'dark_mode'.tr(context: context),
           style: TextStyles.font16Medium,
         ),
         BlocBuilder<ChangeThemeCubit, ChangeThemeState>(

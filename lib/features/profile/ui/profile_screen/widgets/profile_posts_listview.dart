@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -27,8 +28,8 @@ class ProfilePostsListview extends StatelessWidget {
             : cubit.postsList.isEmpty
                 ? SizedBox(
                     height: AppSize.fullHight(context) * .5,
-                    child: const AppEmptyWidget(
-                      text: 'no posts',
+                    child: AppEmptyWidget(
+                      text: 'no_ads'.tr(context: context),
                     ),
                   )
                 : ListView.separated(

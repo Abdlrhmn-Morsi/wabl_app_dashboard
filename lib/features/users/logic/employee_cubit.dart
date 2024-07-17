@@ -52,7 +52,7 @@ class EmployeeCubit extends Cubit<EmployeeState> {
     bool isLoadingActive = true,
   }) async {
     emit(const EmployeeState.fresh());
-    if (!isPagination && !AppCashe.isPostCashed() && isLoadingActive) {
+    if (!AppCashe.isEmployeeCashed() || (isLoadingActive && isRefresh)) {
       emit(const EmployeeState.loading());
     }
     if (isPagination) {

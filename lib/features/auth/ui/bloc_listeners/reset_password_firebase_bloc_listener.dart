@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/helpers/extensions.dart';
@@ -28,7 +29,7 @@ class ResetPasswordFirebaseBlocListener extends StatelessWidget {
             context.pushAndReplaceAllNamed(Routes.logInScreen);
             AppMessage.show(
               context: context,
-              message: 'Check your email to reset password',
+              message: 'check_your_email_to_reset_password'.tr(),
             );
           },
           error: (message) {

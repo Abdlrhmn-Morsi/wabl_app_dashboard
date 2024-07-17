@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wabl_app_dashboard/features/auth/logic/auth_helper.dart';
@@ -26,7 +27,7 @@ class ProfileAppBar extends StatelessWidget {
           ),
         ),
         Text(
-          'Profile',
+          'profile'.tr(context: context),
           style: TextStyles.font16Bold,
         ),
         !AuthHelper.isMe(postOwner.id ?? "")

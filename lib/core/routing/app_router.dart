@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wabl_app_dashboard/features/language/language_screen.dart';
 import '../../features/auth/ui/screens/check_reset_code_screen.dart';
 import '../../features/auth/ui/screens/forget_password_screen.dart';
 import '../../features/auth/ui/screens/login_screen.dart';
@@ -71,6 +72,10 @@ class AppRouter {
           builder: (_) => PostScreen(
             post: post,
           ),
+        );
+      case Routes.languageScreen:
+        return MaterialPageRoute(
+          builder: (_) => const LanguageScreen(),
         );
 
       case Routes.bottomNavBar:

@@ -16,4 +16,7 @@ class Routes {
 
   static const String allConversationsScreen = '/allConversationsScreen';
   static const String chatScreen = '/chatScreen';
+
+  //! lang
+  static const String languageScreen = '/languageScreen';
 }

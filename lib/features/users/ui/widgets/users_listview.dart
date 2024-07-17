@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -46,9 +47,9 @@ class _UsersListViewState extends State<UsersListView> {
         return state is Loading
             ? const Center(child: CircularProgressIndicator())
             : cubit.isSearchResultEmpty()
-                ? const Center(
+                ? Center(
                     child: Text(
-                    'No result found',
+                    'not_found'.tr(context: context),
                   ))
                 : RefreshIndicator(
                     onRefresh: () async {
@@ -81,7 +82,7 @@ class _UsersListViewState extends State<UsersListView> {
                                 appAlertBottomSheet(
                                   context: context,
                                   message:
-                                      'Are you sure u want to Hire ${user.name} as Admin?',
+                                      '${user.name ?? ""}\n${'are_you_sure_you_want_to_hire_him_as_admin'.tr()}',
                                   onTapAction: () {
                                     RoleCubit.get
                                         .emitUpdateRole(

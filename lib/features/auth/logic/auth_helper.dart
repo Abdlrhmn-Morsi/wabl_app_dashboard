@@ -37,7 +37,7 @@ class AuthHelper {
   }
 
   static bool isMe(String id) {
-    return userId == id;
+    return userId() == id;
   }
 
   static Future<bool> isAuthorized(id) async {

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/helpers/app_images.dart';
@@ -49,20 +50,20 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                       width: AppSize.fullWidth(context) * .4,
                     ),
                     Text(
-                      'Please enter your email to get reset link',
+                      'please_enter_your_email_to_get_reset_link'.tr(),
                       style: TextStyles.font14Medium.copyWith(height: 1.4),
                       textAlign: TextAlign.center,
                     ),
                     verticalSpace(24),
                     AppTextField(
                       controller: ForgetPasswordCubit.get.emailTEC,
-                      hintText: 'Email Adress',
+                      hintText: 'email'.tr(),
                       isNoBorder: true,
                       validator: AppRegex.emailValidation,
                     ),
                     verticalSpace(16),
                     AppTextButton(
-                      buttonText: 'Confirm',
+                      buttonText: 'confirm'.tr(),
                       textStyle: TextStyles.font14Bold,
                       onPressed: () {
                         // context.pushNamed(Routes.checkResetCodeScreen);

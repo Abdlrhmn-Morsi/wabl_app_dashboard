@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wabl_app_dashboard/core/helpers/spacing.dart';
@@ -39,7 +40,7 @@ class _UsersScreenState extends State<UsersScreen> {
                 const UpdateRoleBlocListener(),
                 verticalSpace(20),
                 AppGlobalAppBar(
-                  title: 'Users',
+                  title: 'users'.tr(context: context),
                   isDefaultBackActive: false,
                   onTapBack: () {
                     BottomNavBarCubit.get.changeIndex(0);
@@ -48,7 +49,7 @@ class _UsersScreenState extends State<UsersScreen> {
                 verticalSpace(20),
                 AppSearch(
                   controller: UserCubit.get.searchController,
-                  hint: 'Type User Email',
+                  hint: 'type_user_email'.tr(context: context),
                   onTapSearch: () {
                     UserCubit.get.emitGetAllUsers(
                       isRefresh: true,

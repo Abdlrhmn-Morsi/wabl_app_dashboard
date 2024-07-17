@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -87,7 +88,7 @@ class EmployeesListViewItem extends StatelessWidget {
                     borderRadius: BorderRadius.circular(4.r),
                   ),
                   child: Text(
-                    'un Hire',
+                    'un_hire'.tr(context: context),
                     style: TextStyles.font12Medium.copyWith(
                       color: Colors.white,
                     ),

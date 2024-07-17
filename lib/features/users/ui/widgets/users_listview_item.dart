@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wabl_app_dashboard/core/helpers/spacing.dart';
@@ -63,7 +64,7 @@ class UsersListViewItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(4.r),
             ),
             child: Text(
-              'Hire',
+              'hire'.tr(context: context),
               style: TextStyles.font12Medium.copyWith(
                 color: Colors.white,
               ),

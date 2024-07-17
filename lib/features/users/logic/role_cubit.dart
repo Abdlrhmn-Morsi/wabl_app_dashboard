@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_bloc/flutter_bloc.dart.';
 import 'package:wabl_app_dashboard/core/di/dependency_injection.dart';
 import '../../../core/networking/api_result.dart';
@@ -33,8 +34,8 @@ class RoleCubit extends Cubit<RoleState> {
       success: (data) {
         emit(RoleState.success(
           role == 'admin'
-              ? "Employee added successfully"
-              : "Employee Removed successfully",
+              ? "employee_added_successfully".tr()
+              : "employee_removed_successfully".tr(),
         ));
       },
       failure: (e) {

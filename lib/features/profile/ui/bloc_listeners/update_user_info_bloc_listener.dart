@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/helpers/extensions.dart';
@@ -30,7 +31,7 @@ class UpdateUserInfoBlocListener extends StatelessWidget {
             FocusManager.instance.primaryFocus?.unfocus();
             AppToast.show(
               context: context,
-              message: 'Updated Successfuly!',
+              message: 'updated_successfuly'.tr(context: context),
             );
           },
           updateUserInfoError: (message) {

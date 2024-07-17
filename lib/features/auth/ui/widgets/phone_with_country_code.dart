@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart.';
 import '../../../../core/helpers/app_regex.dart';
@@ -21,7 +22,7 @@ class PhoneWithCountryCode extends StatelessWidget {
               child: AppTextField(
                 controller: cubit.phoneNumberTEC,
                 keyboardType: TextInputType.number,
-                hintText: 'phone number',
+                hintText: 'Phone'.tr(),
                 isNoBorder: true,
                 validator: AppRegex.phoneNumberValidation,
               ),

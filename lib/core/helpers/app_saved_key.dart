@@ -5,4 +5,6 @@ class AppSavedKey {
   static const String resetToken = 'RESET_TOKEN';
   static const String userId = 'USER_ID';
   static const String role = 'ROLE';
+  static const String appLang = 'App_Lang';
+  static const String defaultLang = 'ar';
 }

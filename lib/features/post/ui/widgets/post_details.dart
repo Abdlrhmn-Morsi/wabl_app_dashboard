@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/helpers/app_helper_functions.dart';
@@ -47,7 +48,7 @@ class PostDetails extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              '${AppHelperFunctions.formatNumber(post.viewCount ?? 0)} views',
+              '${AppHelperFunctions.formatNumber(post.viewCount ?? 0)} ${'views'.tr(context: context)}',
               style: TextStyles.font12Bold,
             ),
           ],

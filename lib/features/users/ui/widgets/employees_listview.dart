@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -35,15 +36,15 @@ class _EmployeesListViewState extends State<EmployeesListView> {
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Column(
         children: [
-          const AppTextWithAction(text: 'Employees'),
+          AppTextWithAction(text: 'employees'.tr(context: context)),
           verticalSpace(14),
           BlocBuilder<EmployeeCubit, EmployeeState>(
             buildWhen: (previous, current) =>
                 current is Loading ||
                 current is Success ||
                 current is Error ||
-                current is Fresh ||
-                current is Pagination,
+                current is Pagination ||
+                current is Fresh,
             builder: (context, state) {
               var cubit = EmployeeCubit.get;
               return state is Loading
@@ -70,7 +71,8 @@ class _EmployeesListViewState extends State<EmployeesListView> {
                               appAlertBottomSheet(
                                 context: context,
                                 message:
-                                    'Are you sure u want to Remove this Employee?',
+                                    'are_you_sure_you_want_to_remove_this_employee'
+                                        .tr(),
                                 onTapAction: () {
                                   RoleCubit.get
                                       .emitUpdateRole(

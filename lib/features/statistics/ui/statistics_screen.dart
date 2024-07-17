@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart.';
@@ -36,40 +37,40 @@ class _StatisticsWidgetsState extends State<StatisticsWidgets> {
           child: Column(
             children: [
               verticalSpace(10),
-              const AppTextWithAction(text: 'Users'),
+              AppTextWithAction(text: 'users'.tr(context: context)),
               verticalSpace(10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   StatisticsItem(
-                    title: 'Total Users',
+                    title: 'all_users'.tr(context: context),
                     num: cubit.usersCount.toString(),
                   ),
                   horizontalSpace(10),
                   StatisticsItem(
-                    title: 'Employees',
+                    title: 'employees'.tr(context: context),
                     num: cubit.employeesCount.toString(),
                   ),
                 ],
               ),
               verticalSpace(10),
-              const AppTextWithAction(text: 'Posts'),
+              AppTextWithAction(text: 'ads'.tr(context: context)),
               verticalSpace(10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   StatisticsItem(
-                    title: 'All',
+                    title: 'all'.tr(context: context),
                     num: cubit.totalPosts.toString(),
                   ),
                   horizontalSpace(10),
                   StatisticsItem(
-                    title: 'Approved',
+                    title: 'approved'.tr(context: context),
                     num: cubit.approvedPosts.toString(),
                   ),
                   horizontalSpace(10),
                   StatisticsItem(
-                    title: 'Pending',
+                    title: 'pending'.tr(context: context),
                     num: cubit.pendingPosts.toString(),
                   ),
                 ],

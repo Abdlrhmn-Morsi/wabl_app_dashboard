@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/helpers/spacing.dart';
@@ -17,7 +18,7 @@ class AllConversationsScreen extends StatelessWidget {
             children: [
               //? Bloc Listeners
               verticalSpace(20),
-              const AppGlobalAppBar(title: 'Conversations'),
+              AppGlobalAppBar(title: 'conversations'.tr(context: context)),
               verticalSpace(20),
               const ConversationsListView(),
             ],

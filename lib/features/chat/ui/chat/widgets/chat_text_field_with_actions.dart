@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/helpers/spacing.dart';
@@ -39,7 +40,7 @@ class ChatTextFieldWithActions extends StatelessWidget {
                         vertical: 10.h,
                       ),
                       textStyle: TextStyle(fontSize: 14.sp),
-                      hintText: 'Message',
+                      hintText: 'messege'.tr(context: context),
                       isNoBorder: true,
                       isDense: true,
                       isMultibleLines: true,

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -96,8 +97,8 @@ class _PostsListviewItemState extends State<PostsListviewItem> {
                       appAlertBottomSheet(
                         context: context,
                         message: widget.post.isEnabled == true
-                            ? "Are you sure to unpublish this post?"
-                            : 'Are you sure to publish this post?',
+                            ? "are_you_sure_to_unpublish_this_post".tr()
+                            : 'are_you_sure_to_publish_this_post'.tr(),
                         onTapAction: () {
                           if (widget.post.isEnabled == true) {
                             cubit.emitUpdatePost(

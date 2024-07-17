@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart.';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -30,7 +31,7 @@ class PostsScreen extends StatelessWidget {
               const UpdatePostBlocListener(),
               verticalSpace(20),
               AppGlobalAppBar(
-                title: 'Posts',
+                title: 'ads'.tr(context: context),
                 isDefaultBackActive: false,
                 onTapBack: () {
                   BottomNavBarCubit.get.changeIndex(0);
@@ -43,9 +44,9 @@ class PostsScreen extends StatelessWidget {
                   var cubit = PostCubit.get;
                   return AppToggleBtns(
                     chosenIndex: cubit.lastTapedIndex,
-                    titlesList: const [
-                      'Pending',
-                      'Approved',
+                    titlesList: [
+                      'pending'.tr(context: context),
+                      'approved'.tr(context: context),
                     ],
                     onTap: (index) {
                       PostCubit.get.getLastIndex(index);

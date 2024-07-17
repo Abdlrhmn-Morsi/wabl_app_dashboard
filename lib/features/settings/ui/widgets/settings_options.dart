@@ -1,12 +1,17 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../../../core/helpers/app_images.dart';
+import '../../../../core/helpers/extensions.dart';
 import '../../../../core/helpers/spacing.dart';
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/styles.dart';
 import '../../../../core/widgets/app_logout_alert_message_dialog.dart';
 import '../../../auth/logic/login_cubit.dart';
-import 'settings_option_item.dart';
 import 'dark_mode_switch.dart';
+import 'settings_option_item.dart';
 
 class SettingsOptions extends StatelessWidget {
   const SettingsOptions({super.key});
@@ -16,53 +21,89 @@ class SettingsOptions extends StatelessWidget {
     return Column(
       children: [
         const DarkModeSwitch(),
-        verticalSpace(5),
-        const SettingsOptionItem(title: 'Settings'),
         verticalSpace(10),
-        const SettingsOptionItem(title: 'Help'),
-        verticalSpace(10),
-        const SettingsOptionItem(title: 'about us'),
-        verticalSpace(10),
-        const SettingsOptionItem(title: 'Terms and Conditions'),
-        verticalSpace(10),
-        const SettingsOptionItem(title: 'Privacy policy'),
-        verticalSpace(10),
-        const SettingsOptionItem(title: 'Change Language'),
+        // SettingsOptionItem(
+        //   title: 'settings'.tr(context: context),
+        // ),
+        // verticalSpace(20),
+        SettingsOptionItem(title: 'help'.tr(context: context)),
+        verticalSpace(20),
+        SettingsOptionItem(title: 'about_us'.tr(context: context)),
+        verticalSpace(15),
+        SettingsOptionItem(title: 'terms_and_conditions'.tr(context: context)),
+        verticalSpace(20),
+        SettingsOptionItem(title: 'privacy_policy'.tr(context: context)),
+        verticalSpace(20),
+        SettingsOptionItem(
+          title: 'change_language'.tr(context: context),
+          onTap: () {
+            context.pushNamed(Routes.languageScreen);
+          },
+        ),
         verticalSpace(10),
         const Divider(thickness: 1),
         verticalSpace(10),
-        const LogOutBtn(),
+        LogoutOrDeleteAccountBtn(
+          icon: AppImages.logout,
+          title: 'logout'.tr(context: context),
+          onTap: () {
+            AppLogoutAlertMessage.show(
+              title: 'logout'.tr(context: context),
+              context: context,
+              message: 'are_you_sure_you_want_to_logout'.tr(),
+              onSubbmit: () {
+                Navigator.pop(context);
+                LoginCubit.get.logout(context: context);
+              },
+            );
+          },
+        ),
+        // verticalSpace(20),
+        // LogoutOrDeleteAccountBtn(
+        //   icon: AppImages.trash,
+        //   title: 'delete_account'.tr(),
+        //   onTap: () {
+        //     AppLogoutAlertMessage.show(
+        //       title: 'delete_account'.tr(),
+        //       context: context,
+        //       message: 'are_you_sure_you_want_to_delete_your_account'.tr(),
+        //       onSubbmit: () {
+        //         Navigator.pop(context);
+        //         LoginCubit.get.deleteAccount(context: context);
+        //       },
+        //     );
+        //   },
+        // ),
       ],
     );
   }
 }
 
-class LogOutBtn extends StatelessWidget {
-  const LogOutBtn({super.key});
+class LogoutOrDeleteAccountBtn extends StatelessWidget {
+  final String title;
+  final String icon;
+  final void Function()? onTap;
+  const LogoutOrDeleteAccountBtn({
+    super.key,
+    this.onTap,
+    required this.title,
+    required this.icon,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        AppLogoutAlertMessage.show(
-          context: context,
-          message: 'Are you sure u want to logout?',
-          onSubbmit: () {
-            Navigator.pop(context);
-            LoginCubit.get.logout(context: context);
-          },
-        );
-      },
+      onTap: onTap,
       child: Row(
         children: [
           Image.asset(
-            AppImages.logout,
+            icon,
             height: 20.h,
             color: Colors.red,
           ),
           horizontalSpace(10),
           Text(
-            'Log out',
+            title,
             style: TextStyles.font14Bold,
           ),
         ],

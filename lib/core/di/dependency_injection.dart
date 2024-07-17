@@ -11,7 +11,6 @@ import '../../features/auth/logic/signup_cubit.dart';
 import '../../features/bottom_nav_bar/logic/bottom_nav_bar_cubit.dart';
 import '../../features/category/logic/category_cubit.dart';
 import '../../features/chat/logic/chat_cubit.dart';
-import '../../features/post/logic/create_post_cubit.dart';
 import '../../features/post/logic/current_user_posts_cubit.dart';
 import '../../features/post/logic/post_cubit.dart';
 import '../../features/post/logic/post_viewer_cubit.dart';
@@ -55,10 +54,7 @@ Future initGetIt() async {
   getIt.registerLazySingleton<PostCubit>(() => PostCubit(
         getIt(),
       ));
-  getIt.registerLazySingleton<CreatePostCubit>(() => CreatePostCubit(
-        getIt(),
-        getIt(),
-      ));
+
   getIt.registerLazySingleton<UpdatePostCubit>(() => UpdatePostCubit(
         getIt(),
         getIt(),

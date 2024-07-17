@@ -65,4 +65,10 @@ class ApplocalStorage {
   static String getUserId() {
     return getString(AppSavedKey.userId);
   }
+  
+  static String getAppLang() {
+    return getString(AppSavedKey.appLang).isEmpty
+        ? AppSavedKey.defaultLang
+        : getString(AppSavedKey.appLang);
+  }
 }

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart.';
 import '../../../../core/helpers/extensions.dart';
@@ -22,13 +23,13 @@ class ProfileDataOptions extends StatelessWidget {
         return Column(
           children: [
             ProfileOption(
-              title: 'Email',
+              title: 'email'.tr(context: context),
               value: cubit.profileData.email ?? "",
               hideEdit: true,
             ),
             verticalSpace(30),
             ProfileOption(
-              title: 'name',
+              title: 'name'.tr(context: context),
               value: cubit.profileData.name ?? "",
               onTap: () {
                 EditNameScreen(name: cubit.profileData.name ?? "")
@@ -37,7 +38,7 @@ class ProfileDataOptions extends StatelessWidget {
             ),
             verticalSpace(25),
             ProfileOption(
-              title: 'Phone',
+              title: 'Phone'.tr(context: context),
               value: cubit.profileData.phone ?? "",
               onTap: () {
                 EditPhoneScreen(
@@ -47,7 +48,7 @@ class ProfileDataOptions extends StatelessWidget {
             ),
             verticalSpace(25),
             ProfileOption(
-              title: 'Country Code',
+              title: 'country_code'.tr(context: context),
               value: '+${cubit.profileData.countryCode ?? "20"}',
               onTap: () {
                 EditCountryCodeScreen(
@@ -57,7 +58,7 @@ class ProfileDataOptions extends StatelessWidget {
             ),
             verticalSpace(25),
             ProfileOption(
-              title: 'Password',
+              title: 'password'.tr(context: context),
               value: '***************',
               onTap: () {
                 const EditPasswordScreen().goOnWidget(context);
