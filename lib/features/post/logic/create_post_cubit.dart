@@ -68,7 +68,7 @@ class CreatePostCubit extends Cubit<CreatePostState> {
     }
     emit(const CreatePostState.loading());
     var body = PostRequestBody(
-      relatedToId: AuthHelper.userId,
+      relatedToId: AuthHelper.userId(),
       content: contentTEC.text,
       createdAt: FieldValue.serverTimestamp(),
       categoryId: categoryCubit.selectedCategoryAddPostAndSearch?.id ?? "",

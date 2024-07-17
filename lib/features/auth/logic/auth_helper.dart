@@ -1,11 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:wabl_app_dashboard/core/helpers/app_local_storage.dart';
 import 'package:wabl_app_dashboard/core/helpers/app_saved_key.dart';
-
 import '../../profile/data/models/profile_response_body.dart';
 
 class AuthHelper {
-  static String userId = ApplocalStorage
+  static String userId() => ApplocalStorage
       .getToken(); // FirebaseAuth.instance.currentUser?.uid ?? "";
 
   static Future<bool> isExists({

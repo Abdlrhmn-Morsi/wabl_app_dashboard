@@ -78,7 +78,7 @@ class _ChatMessagesListviewState extends State<ChatMessagesListview> {
                                 var data = dataList[index];
                                 return ChatMessagesItem(
                                   data: data,
-                                  isMe: data.senderId == AuthHelper.userId,
+                                  isMe: data.senderId == AuthHelper.userId(),
                                   onLongPress: () {
                                     if (data.isDeleted == true) return;
                                     appDeleteAlertBottomSheet(

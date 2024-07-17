@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:wabl_app_dashboard/core/helpers/app_helper_functions.dart';
 import '../../../core/di/dependency_injection.dart';
 import '../../../core/helpers/app_cashed.dart';
 import '../../../core/helpers/image_crop_config.dart';
@@ -73,8 +74,9 @@ class ChatCubit extends Cubit<ChatState> {
     required String receiverId,
   }) async {
     try {
-      var chatSnapshot =
-          await chatCol.where('users', arrayContains: AuthHelper.userId).get();
+      var chatSnapshot = await chatCol
+          .where('users', arrayContains: AuthHelper.userId())
+          .get();
 
       String chatId = '';
       bool chatExists = false;
@@ -104,7 +106,7 @@ class ChatCubit extends Cubit<ChatState> {
       var chatId = doc.id;
       var data = ChatRequestBody(
         id: chatId,
-        users: [AuthHelper.userId, receiverId],
+        users: [AuthHelper.userId(), receiverId],
         createdAt: FieldValue.serverTimestamp(),
       );
       await doc.set(data.toJson());
@@ -143,7 +145,7 @@ class ChatCubit extends Cubit<ChatState> {
         id: messageId,
         receiverId: receiverId,
         message: messageTEC.text,
-        senderId: AuthHelper.userId,
+        senderId: AuthHelper.userId(),
         createdAt: FieldValue.serverTimestamp(),
       );
       await doc.set(data.toJson());
@@ -185,6 +187,7 @@ class ChatCubit extends Cubit<ChatState> {
           emit(ChatState.sendSuccess(v));
         },
         failure: (e) {
+          AppHelperFunctions.unFocusKeyboard();
           emit(ChatState.sendError(message: e.apiErrorModel.message ?? ""));
         },
       );
@@ -203,7 +206,7 @@ class ChatCubit extends Cubit<ChatState> {
       var data = chatCol
           .where(
             'users',
-            arrayContains: AuthHelper.userId,
+            arrayContains: AuthHelper.userId(),
           )
           .orderBy(
             'created_at',
@@ -258,7 +261,7 @@ class ChatCubit extends Cubit<ChatState> {
           for (var chat in chatList) {
             chat.lastMessage = await getLatestMessage(chat.id);
             for (var user in chat.users) {
-              if (user != AuthHelper.userId) {
+              if (user != AuthHelper.userId()) {
                 var postOwner = await AuthHelper.currentUserData(
                   id: user,
                 );

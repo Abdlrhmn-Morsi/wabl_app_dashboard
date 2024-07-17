@@ -80,7 +80,7 @@ class ProfileCubit extends Cubit<ProfileState> {
     try {
       //! reomve null
       Map<String, dynamic> data = AppHelperFunctions.removeNulls(body.toJson());
-      await usersCol.doc(AuthHelper.userId).update(data);
+      await usersCol.doc(AuthHelper.userId()).update(data);
       return const ApiResult.success(null);
     } catch (e) {
       return ApiResult.failure(ErrorHandler.handle(e));

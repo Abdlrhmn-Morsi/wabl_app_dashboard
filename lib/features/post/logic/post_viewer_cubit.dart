@@ -19,11 +19,11 @@ class PostViewerCubit extends Cubit<PostViewerState> {
   }) async {
     try {
       var post = postsCol.doc(postId);
-      var viewer = post.collection('viewers').doc(AuthHelper.userId);
+      var viewer = post.collection('viewers').doc(AuthHelper.userId());
       var data = await viewer.get();
       if (!data.exists) {
         await viewer.set({
-          'id': AuthHelper.userId,
+          'id': AuthHelper.userId(),
           'viewed_at': FieldValue.serverTimestamp(),
         });
         await post.update({

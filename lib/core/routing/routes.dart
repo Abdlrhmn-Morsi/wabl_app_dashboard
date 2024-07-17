@@ -1,7 +1,7 @@
 class Routes {
   //! Auth
-  static const String bottomNavBar = '/';
-  static const String logInScreen = '/logInScreen';
+  static const String bottomNavBar = '/bottomNavBar';
+  static const String logInScreen = '/';
   static const String signUpScreen = '/signUpScreen';
   static const String forgetPasswordScreen = '/forgetPasswordScreen';
   static const String checkResetCodeScreen = '/checkResetCodeScreen';

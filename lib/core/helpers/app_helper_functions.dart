@@ -50,4 +50,8 @@ class AppHelperFunctions {
   static String formatNumber(int number) {
     return NumberFormat.compact().format(number);
   }
+
+  static unFocusKeyboard() {
+    FocusManager.instance.primaryFocus?.unfocus();
+  }
 }
