@@ -10,6 +10,9 @@ import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/styles.dart';
 import '../../../../core/widgets/app_logout_alert_message_dialog.dart';
 import '../../../auth/logic/login_cubit.dart';
+import '../../screens/about_us.dart';
+import '../../screens/privacy_policy_screen.dart';
+import '../../screens/terms_and_conditions_screen.dart';
 import 'dark_mode_switch.dart';
 import 'settings_option_item.dart';
 
@@ -26,13 +29,28 @@ class SettingsOptions extends StatelessWidget {
         //   title: 'settings'.tr(context: context),
         // ),
         // verticalSpace(20),
-        SettingsOptionItem(title: 'help'.tr(context: context)),
-        verticalSpace(20),
-        SettingsOptionItem(title: 'about_us'.tr(context: context)),
+        SettingsOptionItem(
+          title: 'about_us'.tr(context: context),
+          onTap: () {
+            const AboutUs().goOnWidget(context);
+          },
+        ),
         verticalSpace(15),
-        SettingsOptionItem(title: 'terms_and_conditions'.tr(context: context)),
+        SettingsOptionItem(
+          title: 'privacy_policy'.tr(context: context),
+          onTap: () {
+            const PrivacyPolicyScreen().goOnWidget(context);
+          },
+        ),
+
         verticalSpace(20),
-        SettingsOptionItem(title: 'privacy_policy'.tr(context: context)),
+        SettingsOptionItem(
+          title: 'terms_and_conditions'.tr(context: context),
+          onTap: () {
+            const TermsAndConditionsScreen().goOnWidget(context);
+          },
+        ),
+
         verticalSpace(20),
         SettingsOptionItem(
           title: 'change_language'.tr(context: context),

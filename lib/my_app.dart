@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
                 localizationsDelegates: context.localizationDelegates,
                 supportedLocales: context.supportedLocales,
                 locale: context.locale,
-                title: 'Wabl App',
+                title: 'Wabl Dashboard',
                 theme: cubit.themeData(),
                 debugShowCheckedModeBanner: false,
                 onGenerateRoute: AppRouter.generateRoute,
