@@ -81,12 +81,11 @@
 "are_you_sure_to_unpublish_this_post":"هل أنت متاكد من تعطيل هذا الإعلان؟",
 "are_you_sure_to_publish_this_post":"هل أنت متاكد من نشر هذا الإعلان؟",
 "are_you_sure_you_want_to_remove_this_employee":"هل أنت متاكد من حذف هذا الموظف؟",
-"are_you_sure_you_want_to_hire_him_as_admin":"هل أنت متاكد من توظيفه كمشرف؟"
-
-
-
-
-
-
+"are_you_sure_you_want_to_hire_him_as_admin":"هل أنت متاكد من توظيفه كمشرف؟",
+"update_country_code":"تحديث كود الدولة",
+"update_name":"تحديث الاسم",
+"update_phone":"تحديث الهاتف",
+"no_employees":"لا يوجد موظفين",
+"no_more_data_available":"لا توجد بيانات اخري"
 
 }

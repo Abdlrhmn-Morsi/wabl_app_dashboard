@@ -1,21 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:json_annotation/json_annotation.dart';
-part 'user_response_body.g.dart';
 
-@JsonSerializable()
 class UserResponseBody {
-  @JsonKey(name: 'user_id')
   String? userId;
-  @JsonKey(name: 'doc_id')
   String? docId;
   String? name;
   String? avatar;
   String? email;
   String? phone;
-  @JsonKey(name: 'country_code')
   String? countryCode;
-  @JsonKey(name: 'created_at')
-  String? createdAt;
+  Timestamp? createdAt;
   UserResponseBody({
     this.docId,
     this.userId,
@@ -38,7 +31,7 @@ class UserResponseBody {
     countryCode = doc['country_code'];
     createdAt = doc['created_at'];
   }
-  factory UserResponseBody.fromJson(Map<String, dynamic> json) =>
-      _$UserResponseBodyFromJson(json);
-  Map<String, dynamic> toJson() => _$UserResponseBodyToJson(this);
+  // factory UserResponseBody.fromJson(Map<String, dynamic> json) =>
+  //     _$UserResponseBodyFromJson(json);
+  // Map<String, dynamic> toJson() => _$UserResponseBodyToJson(this);
 }

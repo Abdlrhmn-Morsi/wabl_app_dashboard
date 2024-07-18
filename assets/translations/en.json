@@ -77,7 +77,12 @@
 "are_you_sure_to_unpublish_this_post":"Are you sure to unpublish this post?",
 "are_you_sure_to_publish_this_post":"Are you sure to publish this post?",
 "are_you_sure_you_want_to_remove_this_employee":"Are you sure you want to remove this employee?",
-"are_you_sure_you_want_to_hire_him_as_admin":"Are you sure you want to hire him as Admin?"
-
+"are_you_sure_you_want_to_hire_him_as_admin":"Are you sure you want to hire him as Admin?",
+"update_country_code":"Update Country Code",
+"update_name":"Update Name",
+"update_phone":"Update Phone",
+"no_employees":"No employees",
+"no_more_data_available":"No more data available",
+"employees":"Employees"
 
 }

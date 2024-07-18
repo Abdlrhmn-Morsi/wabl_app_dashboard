@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -51,7 +52,7 @@ Future appAlertBottomSheet({
                     btnColor: ColorsManager.mainBoldColor,
                     textColor: Colors.white,
                     iconColor: Colors.white,
-                    title: 'ok',
+                    title: 'ok'.tr(context: context),
                     onTap: () {
                       context.pop();
                       onTapAction!();
@@ -62,7 +63,7 @@ Future appAlertBottomSheet({
                 Expanded(
                   child: AlertButton(
                     borderColor: ColorsManager.mainBoldColor,
-                    title: 'Close',
+                    title: 'cancel'.tr(context: context),
                     onTap: () {
                       context.pop();
                     },

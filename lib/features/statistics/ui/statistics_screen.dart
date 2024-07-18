@@ -28,8 +28,7 @@ class _StatisticsWidgetsState extends State<StatisticsWidgets> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<StatisticsCubit, StatisticsState>(
-      buildWhen: (previous, current) =>
-          current is Loading || current is Success || current is Error,
+      buildWhen: (previous, current) => current is Success || current is Error,
       builder: (context, state) {
         var cubit = StatisticsCubit.get;
         return Container(

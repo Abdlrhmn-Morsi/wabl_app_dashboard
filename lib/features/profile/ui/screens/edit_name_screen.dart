@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/helpers/app_regex.dart';
@@ -56,7 +57,7 @@ class _EditNameScreenState extends State<EditNameScreen> {
                     children: [
                       Expanded(
                         child: Text(
-                          'Update Your Name',
+                          'update_name'.tr(context: context),
                           maxLines: null,
                           textAlign: TextAlign.start,
                           style: TextStyles.font18Bold,
@@ -67,7 +68,7 @@ class _EditNameScreenState extends State<EditNameScreen> {
                   verticalSpace(20),
                   AppTextField(
                     isNoBorder: true,
-                    hintText: 'update your name',
+                    hintText: 'update_name'.tr(context: context),
                     controller: nameTEC,
                     validator: AppRegex.checkFullName,
                   ),
@@ -76,7 +77,7 @@ class _EditNameScreenState extends State<EditNameScreen> {
                     verticalPadding: 8,
                     buttonHeight: 40.h,
                     borderRadius: 8.r,
-                    buttonText: 'Update',
+                    buttonText: 'update'.tr(context: context),
                     textStyle: TextStyles.font14Bold,
                     onPressed: () {
                       if (formKey.currentState!.validate()) {

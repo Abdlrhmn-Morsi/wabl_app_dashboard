@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wabl_app_dashboard/core/widgets/app_empty_widget.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/widgets/app_alert_bottom_sheet.dart';
 import '../../../../core/widgets/app_dashed_divider.dart';
@@ -49,49 +50,59 @@ class _EmployeesListViewState extends State<EmployeesListView> {
               var cubit = EmployeeCubit.get;
               return state is Loading
                   ? const Center(child: CircularProgressIndicator())
-                  : ListView.separated(
-                      shrinkWrap: true,
-                      controller: widget.scrollController,
-                      padding: EdgeInsets.only(bottom: 20.h),
-                      itemCount: cubit.employeesList.length,
-                      separatorBuilder: (context, index) => Padding(
-                        padding: EdgeInsets.symmetric(vertical: 15.h),
-                        child: const AppDividerDashed(),
-                      ),
-                      itemBuilder: (context, index) {
-                        var user = cubit.employeesList[index];
-                        return AppPaginationLoadingHolder(
-                          index: index,
-                          isLoadingMore: cubit.isLoadingMore,
-                          listLength: cubit.employeesList.length,
-                          isReachedEnd: cubit.isReachedEnd,
-                          item: EmployeesListViewItem(
-                            user: user,
-                            onTap: () {
-                              appAlertBottomSheet(
-                                context: context,
-                                message:
-                                    'are_you_sure_you_want_to_remove_this_employee'
-                                        .tr(),
-                                onTapAction: () {
-                                  RoleCubit.get
-                                      .emitUpdateRole(
-                                    userId: user.userId ?? "",
-                                    role: 'user',
-                                  )
-                                      .then((value) async {
-                                    await EmployeeCubit.get.emitGetAllEmployees(
-                                      isRefresh: true,
-                                      isLoadingActive: false,
-                                    );
-                                  });
-                                },
-                              );
-                            },
+                  : cubit.employeesList.isEmpty
+                      ? Padding(
+                          padding: EdgeInsets.only(top: 20.h),
+                          child: Center(
+                            child: AppEmptyWidget(
+                              text: 'no_employees'.tr(context: context),
+                            ),
                           ),
+                        )
+                      : ListView.separated(
+                          shrinkWrap: true,
+                          controller: widget.scrollController,
+                          padding: EdgeInsets.only(bottom: 20.h),
+                          itemCount: cubit.employeesList.length,
+                          separatorBuilder: (context, index) => Padding(
+                            padding: EdgeInsets.symmetric(vertical: 15.h),
+                            child: const AppDividerDashed(),
+                          ),
+                          itemBuilder: (context, index) {
+                            var user = cubit.employeesList[index];
+                            return AppPaginationLoadingHolder(
+                              index: index,
+                              isLoadingMore: cubit.isLoadingMore,
+                              listLength: cubit.employeesList.length,
+                              isReachedEnd: cubit.isReachedEnd,
+                              item: EmployeesListViewItem(
+                                user: user,
+                                onTap: () {
+                                  appAlertBottomSheet(
+                                    context: context,
+                                    message:
+                                        'are_you_sure_you_want_to_remove_this_employee'
+                                            .tr(),
+                                    onTapAction: () {
+                                      RoleCubit.get
+                                          .emitUpdateRole(
+                                        userId: user.userId ?? "",
+                                        role: 'user',
+                                      )
+                                          .then((value) async {
+                                        await EmployeeCubit.get
+                                            .emitGetAllEmployees(
+                                          isRefresh: true,
+                                          isLoadingActive: false,
+                                        );
+                                      });
+                                    },
+                                  );
+                                },
+                              ),
+                            );
+                          },
                         );
-                      },
-                    );
             },
           ),
         ],

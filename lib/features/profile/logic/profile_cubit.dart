@@ -106,7 +106,10 @@ class ProfileCubit extends Cubit<ProfileState> {
         emit(ProfileState.updateUserInfoSuccess(v));
         personImg = null;
         userimagePickedHolder = null;
-        await getUserInfo(context: context);
+        await getUserInfo(
+          context: context,
+          isRefresh: true,
+        );
       },
       failure: (e) {
         emit(
@@ -161,7 +164,10 @@ class ProfileCubit extends Cubit<ProfileState> {
         emit(ProfileState.updateUserInfoSuccess(url));
         personImg = null;
         userimagePickedHolder = null;
-        await getUserInfo(context: context);
+        await getUserInfo(
+          context: context,
+          isRefresh: true,
+        );
       },
       failure: (e) {
         emit(

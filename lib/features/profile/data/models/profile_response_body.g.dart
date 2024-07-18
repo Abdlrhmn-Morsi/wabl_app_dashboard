@@ -32,7 +32,6 @@ ProfileData _$ProfileDataFromJson(Map<String, dynamic> json) => ProfileData(
       email: json['email'] as String?,
       phone: json['phone'] as String?,
       countryCode: json['country_code'] as String?,
-      createdAt: json['created_at'] as String?,
     );
 
 Map<String, dynamic> _$ProfileDataToJson(ProfileData instance) =>
@@ -44,6 +43,5 @@ Map<String, dynamic> _$ProfileDataToJson(ProfileData instance) =>
       'email': instance.email,
       'phone': instance.phone,
       'country_code': instance.countryCode,
-      'created_at': instance.createdAt,
       'role': instance.role,
     };

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import '../helpers/spacing.dart';
 import '../theming/styles.dart';
@@ -37,7 +38,7 @@ class AppPaginationLoadingHolder extends StatelessWidget {
         if (isReachedEnd && index == listLength - 1) ...[
           verticalSpace(topSpace ?? 40),
           Text(
-            'No more data available',
+            'no_more_data_available'.tr(context: context),
             style: TextStyles.font10GrayRegular,
           ),
           verticalSpace(bottomSpace ?? 20),

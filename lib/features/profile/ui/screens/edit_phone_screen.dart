@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/helpers/app_regex.dart';
@@ -53,7 +54,7 @@ class _EditPhoneScreenState extends State<EditPhoneScreen> {
                     children: [
                       Expanded(
                         child: Text(
-                          'Update Your Phone',
+                          'update_phone'.tr(context: context),
                           maxLines: null,
                           textAlign: TextAlign.start,
                           style: TextStyles.font18Bold,
@@ -65,7 +66,7 @@ class _EditPhoneScreenState extends State<EditPhoneScreen> {
                   AppTextField(
                     keyboardType: TextInputType.phone,
                     isNoBorder: true,
-                    hintText: 'update your phone',
+                    hintText: 'update_phone'.tr(context: context),
                     controller: phoneTEC,
                     validator: AppRegex.phoneNumberValidation,
                   ),
@@ -74,7 +75,7 @@ class _EditPhoneScreenState extends State<EditPhoneScreen> {
                     verticalPadding: 8,
                     buttonHeight: 40.h,
                     borderRadius: 8.r,
-                    buttonText: 'Update',
+                    buttonText: 'update'.tr(context: context),
                     textStyle: TextStyles.font14Bold,
                     onPressed: () {
                       if (formKey.currentState!.validate()) {

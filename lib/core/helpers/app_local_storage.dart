@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'app_saved_key.dart';
 
@@ -65,10 +67,11 @@ class ApplocalStorage {
   static String getUserId() {
     return getString(AppSavedKey.userId);
   }
-  
-  static String getAppLang() {
-    return getString(AppSavedKey.appLang).isEmpty
-        ? AppSavedKey.defaultLang
-        : getString(AppSavedKey.appLang);
+
+  static String getAppLang(BuildContext context) {
+    return context.locale.toString();
+    // getString(AppSavedKey.appLang).isEmpty
+    //     ? AppSavedKey.defaultLang
+    //     : getString(AppSavedKey.appLang);
   }
 }

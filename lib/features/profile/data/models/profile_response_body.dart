@@ -28,8 +28,8 @@ class ProfileData {
   final String? phone;
   @JsonKey(name: 'country_code')
   final String? countryCode;
-  @JsonKey(name: 'created_at')
-  final String? createdAt;
+  // @JsonKey(name: 'created_at')
+  // final String? createdAt;
   final String? role;
   ProfileData({
     this.role,
@@ -40,7 +40,7 @@ class ProfileData {
     this.email,
     this.phone,
     this.countryCode,
-    this.createdAt,
+    // this.createdAt,
   });
   factory ProfileData.fromJson(Map<String, dynamic> json) =>
       _$ProfileDataFromJson(json);

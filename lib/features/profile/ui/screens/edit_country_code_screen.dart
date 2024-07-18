@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/helpers/app_size.dart';
@@ -51,7 +52,7 @@ class _EditCountryCodeScreenState extends State<EditCountryCodeScreen> {
                   children: [
                     Expanded(
                       child: Text(
-                        'Update Your Country Code',
+                        'update_country_code'.tr(context: context),
                         maxLines: null,
                         textAlign: TextAlign.start,
                         style: TextStyles.font18Bold,
@@ -81,7 +82,7 @@ class _EditCountryCodeScreenState extends State<EditCountryCodeScreen> {
                   verticalPadding: 8,
                   buttonHeight: 40.h,
                   borderRadius: 8.r,
-                  buttonText: 'Update',
+                  buttonText: 'update'.tr(context: context),
                   textStyle: TextStyles.font14Bold,
                   onPressed: () {
                     ProfileCubit.get.emitUpdateUserInfo(

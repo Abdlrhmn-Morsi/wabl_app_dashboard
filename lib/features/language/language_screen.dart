@@ -1,11 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../core/helpers/app_local_storage.dart';
-import '../../core/helpers/app_saved_key.dart';
 import '../../core/helpers/spacing.dart';
 import '../../core/theming/colors.dart';
 import '../../core/theming/styles.dart';
@@ -57,7 +54,7 @@ class LangItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        ApplocalStorage.saveString(AppSavedKey.appLang, value);
+        // ApplocalStorage.saveString(AppSavedKey.appLang, value);
         context.setLocale(Locale(value));
       },
       child: Row(
@@ -82,12 +79,12 @@ class LangItem extends StatelessWidget {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: ApplocalStorage.getAppLang() == value
+                  color: ApplocalStorage.getAppLang(context) == value
                       ? ColorsManager.mainColor
                       : Colors.transparent,
                   width: 2,
                 ),
-                color: ApplocalStorage.getAppLang() == value
+                color: ApplocalStorage.getAppLang(context) == value
                     ? ColorsManager.mainColor
                     : Colors.transparent,
               ),

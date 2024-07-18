@@ -13,7 +13,7 @@ class AppTextWithAction extends StatelessWidget {
       children: [
         Text(
           text,
-          style: TextStyles.font16Medium,
+          style: TextStyles.font16Bold,
         ),
         const Icon(Icons.more_horiz),
       ],
