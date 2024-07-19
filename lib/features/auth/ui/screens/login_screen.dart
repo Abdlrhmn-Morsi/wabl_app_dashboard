@@ -6,7 +6,6 @@ import '../../../../core/helpers/app_size.dart';
 import '../../../../core/helpers/extensions.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/routing/routes.dart';
-import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
 import '../../../../core/widgets/app_text_button.dart';
 import '../../logic/login_cubit.dart';
@@ -66,7 +65,7 @@ class _LogInScreenState extends State<LogInScreen> {
                         ),
                       ],
                     ),
-                    verticalSpace(24),
+                    verticalSpace(20),
                     AppTextButton(
                       buttonText: 'sign_in'.tr(),
                       textStyle: TextStyles.font14Bold,
@@ -76,28 +75,28 @@ class _LogInScreenState extends State<LogInScreen> {
                         }
                       },
                     ),
-                    verticalSpace(16),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'dont_have_an_account'.tr(),
-                          style: TextStyles.font14GrayRegular,
-                        ),
-                        horizontalSpace(6),
-                        GestureDetector(
-                          onTap: () {
-                            context.pushNamed(Routes.signUpScreen);
-                          },
-                          child: Text(
-                            'sign_up'.tr(),
-                            style: TextStyles.font14Bold.copyWith(
-                              color: ColorsManager.mainBoldColor,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                    // verticalSpace(16),
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.center,
+                    //   children: [
+                    //     Text(
+                    //       'dont_have_an_account'.tr(),
+                    //       style: TextStyles.font14GrayRegular,
+                    //     ),
+                    //     horizontalSpace(6),
+                    //     GestureDetector(
+                    //       onTap: () {
+                    //         context.pushNamed(Routes.signUpScreen);
+                    //       },
+                    //       child: Text(
+                    //         'sign_up'.tr(),
+                    //         style: TextStyles.font14Bold.copyWith(
+                    //           color: ColorsManager.mainBoldColor,
+                    //         ),
+                    //       ),
+                    //     ),
+                    //   ],
+                    // ),
                   ],
                 ),
               ),
