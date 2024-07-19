@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:readmore/readmore.dart';
@@ -22,8 +23,8 @@ class AppReadMoreText extends StatelessWidget {
       style: style ?? TextStyles.font12Regular.copyWith(height: 1.4),
       colorClickableText: Colors.pink,
       trimMode: TrimMode.Line,
-      trimCollapsedText: '\nSee more ...',
-      trimExpandedText: '\nSee less ...',
+      trimCollapsedText: '\n${'see_more'.tr()}',
+      trimExpandedText: '\n${'see_less'.tr()}',
       moreStyle: TextStyle(
         fontSize: 12.sp,
         fontWeight: FontWeight.bold,

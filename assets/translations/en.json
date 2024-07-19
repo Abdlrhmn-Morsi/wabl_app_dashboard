@@ -86,10 +86,13 @@
 "employees":"Employees",
 "name_cannot_be_less_than_4_characters":"Name can't be less than 4 characters",
 "filed_cannot_be_empty":"Filed can't be empty",
-"invalid_email":"Invalid Email",
+"invalid_email":"Invalid Email should end with",
 "password_can_not_be_less_that_8_characters":"Password can't be less that 8 characters",
 "not_matched_with_password":"Not matched with password",
 "please_confirm_your_password":"Please confirm your password",
-"please_enter_valid_phone_number":"Please enter valid phone number"
+"please_enter_valid_phone_number":"Please enter valid phone number",
+"see_more":"see more ...",
+"see_less":"see less ..."
+
 
 }

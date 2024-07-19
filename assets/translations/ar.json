@@ -89,11 +89,13 @@
 "no_more_data_available":"لا توجد بيانات اخري",
 "name_cannot_be_less_than_4_characters":"الاسم لا يمكن ان يكون اقل من 4 حروف",
 "filed_cannot_be_empty":"الحقل لا يمكن فارغا",
-"invalid_email":"البريد الالكتروني غير صالح",
+"invalid_email":"البريد الالكتروني غير صالح يجب ان ينتهي بـ",
 "password_can_not_be_less_that_8_characters":"كلمة المرور لا يمكن ان تكون اقل من 8 حروف",
 "not_matched_with_password":"لم تتطابق مع كلمة المرور",
 "please_confirm_your_password":"الرجاء تاكيد كلمة المرور",
-"please_enter_valid_phone_number":"الرجاء ادخال رقم هاتف صالح"
+"please_enter_valid_phone_number":"الرجاء ادخال رقم هاتف صالح",
+"see_more":"المزيد ...",
+"see_less":"تقليل ..."
 
 
 }
