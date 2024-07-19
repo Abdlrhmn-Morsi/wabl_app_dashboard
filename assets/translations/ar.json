@@ -57,7 +57,7 @@
     "create_account":"انشاء حساب",
     "dont_have_an_account":"ليس لديك حساب؟",
     "sign_up":"انشاء حساب"    ,
-"full_name":"الاسم ثلاثي",
+"full_name":"الاسم",
 "already_have_an_account":"لديك حساب بالفعل؟",
 "please_enter_your_email_to_get_reset_link":"الرجاء ادخال بريدك الالكتروني للحصول على رابط تغيير كلمة المرور"
 ,
@@ -86,6 +86,14 @@
 "update_name":"تحديث الاسم",
 "update_phone":"تحديث الهاتف",
 "no_employees":"لا يوجد موظفين",
-"no_more_data_available":"لا توجد بيانات اخري"
+"no_more_data_available":"لا توجد بيانات اخري",
+"name_cannot_be_less_than_4_characters":"الاسم لا يمكن ان يكون اقل من 4 حروف",
+"filed_cannot_be_empty":"الحقل لا يمكن فارغا",
+"invalid_email":"البريد الالكتروني غير صالح",
+"password_can_not_be_less_that_8_characters":"كلمة المرور لا يمكن ان تكون اقل من 8 حروف",
+"not_matched_with_password":"لم تتطابق مع كلمة المرور",
+"please_confirm_your_password":"الرجاء تاكيد كلمة المرور",
+"please_enter_valid_phone_number":"الرجاء ادخال رقم هاتف صالح"
+
 
 }

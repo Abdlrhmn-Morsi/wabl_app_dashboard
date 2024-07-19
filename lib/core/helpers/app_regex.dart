@@ -1,12 +1,17 @@
+import 'package:easy_localization/easy_localization.dart';
+
 class AppRegex {
   static String? checkFullName(String? value) {
     String? message;
 
-    if (value!.split(' ').length < 3) {
-      message = 'Please enter full name in 3 words';
+    // if (value!.split(' ').length < 3) {
+    //   message = 'Please enter full name in 3 words';
+    // }
+    if (value!.length < 4) {
+      message = 'name_cannot_be_less_than_4_characters'.tr();
     }
     if (value.isEmpty) {
-      message = 'Please enter name';
+      message = 'filed_cannot_be_empty'.tr();
     }
     return message;
   }
@@ -15,10 +20,10 @@ class AppRegex {
     RegExp emailRegex = RegExp(r'^\w+@gmail\.com$');
     String? message;
     if (!emailRegex.hasMatch(value!)) {
-      message = 'Email should be like name@gmail.com';
+      message = '${'invalid_email'.tr()} @gmail.com';
     }
     if (value.isEmpty) {
-      message = 'Please enter email';
+      message = 'filed_cannot_be_empty'.tr();
     }
     return message;
   }
@@ -28,7 +33,7 @@ class AppRegex {
     String? message;
 
     if (!hasMinLength(value!)) {
-      message = 'Password can not be less that 8 characters';
+      message = 'password_can_not_be_less_that_8_characters'.tr();
     }
     // if (!hasSpecialCharacter(value)) {
     //   message = '$subMessage special character';
@@ -43,7 +48,7 @@ class AppRegex {
     //   message = '$subMessage lowerCase';
     // }
     if (value.isEmpty) {
-      message = 'Please enter password';
+      message = 'filed_cannot_be_empty'.tr();
     }
     return message;
   }
@@ -54,10 +59,10 @@ class AppRegex {
   }) {
     String? message;
     if (password != confirmPassword) {
-      message = 'not matched with password';
+      message = 'not_matched_with_password'.tr();
     }
     if (confirmPassword!.isEmpty) {
-      message = 'Please confirm your password';
+      message = 'please_confirm_your_password'.tr();
     }
     return message;
   }
@@ -65,10 +70,10 @@ class AppRegex {
   static String? phoneNumberValidation(String? value) {
     String? message;
     if (!isPhoneNumberValid(value!)) {
-      message = 'Please enter valid phone number';
+      message = 'please_enter_valid_phone_number'.tr();
     }
     if (value.isEmpty) {
-      message = 'Please enter phone number';
+      message = 'filed_cannot_be_empty'.tr();
     }
     return message;
   }
