@@ -40,7 +40,7 @@ class CreateGroupCubit extends Cubit<CreateGroupState> {
       );
       await doc.set({
         'id': docId,
-        'name': nameTEC.text,
+        'name': nameTEC.text.toLowerCase(),
         'description': descriptionTEC.text,
         'cover': cover,
         'avatar': avatar,
@@ -84,7 +84,7 @@ class CreateGroupCubit extends Cubit<CreateGroupState> {
       Map<String, dynamic> data = {};
 
       if (nameTEC.text.isNotEmpty) {
-        data['name'] = nameTEC.text;
+        data['name'] = nameTEC.text.toLowerCase();
       }
       if (descriptionTEC.text.isNotEmpty) {
         data['description'] = descriptionTEC.text;
