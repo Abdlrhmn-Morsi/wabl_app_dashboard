@@ -1,5 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:wabl_app_dashboard/features/group/logic/update_group_cubit.dart';
+import 'package:wabl_app_dashboard/features/post_settings/logic/car_type_cubit.dart';
 import 'package:wabl_app_dashboard/features/statistics/logic/statistics_cubit.dart';
 import 'package:wabl_app_dashboard/features/users/logic/employee_cubit.dart';
 import 'package:wabl_app_dashboard/features/users/logic/role_cubit.dart';
@@ -18,6 +19,7 @@ import '../../features/post/logic/current_user_posts_cubit.dart';
 import '../../features/post/logic/post_cubit.dart';
 import '../../features/post/logic/post_viewer_cubit.dart';
 import '../../features/post/logic/update_post_cubit.dart';
+import '../../features/post_settings/logic/manufacture_year_cubit.dart';
 import '../../features/profile/data/repos/profile_web_services.dart';
 import '../../features/profile/data/services/profile_web_services.dart';
 import '../../features/profile/logic/profile_cubit.dart';
@@ -84,6 +86,14 @@ Future initGetIt() async {
         getIt(),
       ));
   getIt.registerLazySingleton<UpdateGroupCubit>(() => UpdateGroupCubit());
+
+  //*manufactureYear
+
+  getIt.registerLazySingleton<ManufactureYearCubit>(
+      () => ManufactureYearCubit());
+
+  //*Car type
+  getIt.registerLazySingleton<CarTypeCubit>(() => CarTypeCubit());
 
   //cubits
   getIt.registerLazySingleton<ChangeThemeCubit>(() => ChangeThemeCubit());

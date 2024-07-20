@@ -104,7 +104,24 @@
 "group_description":"Group Description",
 "create":"Create",
 "group_updated_successfuly":"Group updated successfuly",
-"update_group":"Update Group"
-
-
+"update_group":"Update Group",
+"are_you_sure_you_want_to_delete_this_group":"Are you sure you want to delete this group?",
+"group_deleted_successfuly":"Group deleted successfuly",
+"ad_settings":"Ad Settings",
+"manufacture_year":"Manufacture Year",
+"update_manufacture_year":"Update Manufacture Year",
+"add_manufacture_year":"Add Manufacture Year",
+"no_manufacture_year":"No Manufacture Year",
+"are_you_sure_you_want_to_delete_this_manufacture_year":"Are you sure you want to delete this manufacture year?",
+"manufacture_year_created_successfuly":"Manufacture year created successfuly",
+"manufacture_year_updated_successfuly":"Manufacture year updated successfuly",
+"manufacture_year_deleted_successfuly":"Manufacture year deleted successfuly",
+"car_type":"Car Type",
+"no_car_types":"No Car Types",
+"are_you_sure_you_want_to_delete_this_car_type":"Are you sure you want to delete this car type?",
+"update_car_type":"Update Car Type",
+"create_car_type":"Create Car Type",
+"car_type_created_successfuly":"Car type created successfuly",
+"car_type_updated_successfuly":"Car type updated successfuly",
+"car_type_deleted_successfuly":"Car type deleted successfuly"
 }

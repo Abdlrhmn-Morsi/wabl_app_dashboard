@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:path/path.dart' as path;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -25,6 +26,8 @@ class CreateGroupCubit extends Cubit<CreateGroupState> {
   var descriptionTEC = TextEditingController();
   GroupModel? groupData;
 
+  //!==== Create Group ===================================================================
+
   Future<ApiResult> _createGroup() async {
     try {
       var doc = groupCol.doc();
@@ -49,15 +52,13 @@ class CreateGroupCubit extends Cubit<CreateGroupState> {
     }
   }
 
-//!============================================================================
-
   Future emitCreateGroup() async {
     emit(const CreateGroupState.loading());
     var response = await _createGroup();
     response.when(
       success: (v) async {
         resetData();
-        emit(const CreateGroupState.success(''));
+        emit(CreateGroupState.success('group_created_successfuly'.tr()));
         await groupCubit.emitGetAllGroups(isRefresh: true);
       },
       failure: (e) {
@@ -66,7 +67,7 @@ class CreateGroupCubit extends Cubit<CreateGroupState> {
     );
   }
 
-  //! update
+//! ====== Update Group ======================================================
   Future<ApiResult> _updateGroup() async {
     try {
       var cover = await uploadImagesToFirestore(
@@ -88,10 +89,10 @@ class CreateGroupCubit extends Cubit<CreateGroupState> {
       if (descriptionTEC.text.isNotEmpty) {
         data['description'] = descriptionTEC.text;
       }
-      if (cover != null) {
+      if (cover != null && cover.isNotEmpty) {
         data['cover'] = cover;
       }
-      if (avatar != null) {
+      if (avatar != null && avatar.isNotEmpty) {
         data['avatar'] = avatar;
       }
 
@@ -108,7 +109,7 @@ class CreateGroupCubit extends Cubit<CreateGroupState> {
     response.when(
       success: (v) async {
         resetData();
-        emit(const CreateGroupState.success(''));
+        emit(CreateGroupState.success('group_updated_successfuly'.tr()));
         await groupCubit.emitGetAllGroups(isRefresh: true);
       },
       failure: (e) {
@@ -116,6 +117,7 @@ class CreateGroupCubit extends Cubit<CreateGroupState> {
       },
     );
   }
+//! ============================================================
 
   initData(GroupModel? group) {
     groupData = group;
@@ -191,5 +193,48 @@ class CreateGroupCubit extends Cubit<CreateGroupState> {
     groupCover = null;
     nameTEC.clear();
     descriptionTEC.clear();
+  }
+
+//! ============ Delete Group ================================================
+
+  Future emitDeleteGroup() async {
+    emit(const CreateGroupState.loading());
+    var response = await _deleteGroup();
+    response.when(
+      success: (message) async {
+        resetData();
+        emit(CreateGroupState.success('group_deleted_successfuly'.tr()));
+        await groupCubit.emitGetAllGroups(
+          isRefresh: true,
+          // isLoadingActive: false,
+        );
+      },
+      failure: (e) {
+        emit(CreateGroupState.error(message: e.apiErrorModel.message ?? ""));
+      },
+    );
+  }
+
+  Future<ApiResult> _deleteGroup() async {
+    try {
+      await deleteImagFromStorage(groupData?.cover ?? "");
+      await deleteImagFromStorage(groupData?.avatar ?? "");
+      await groupCol.doc(groupData?.id).delete();
+      return const ApiResult.success('');
+    } catch (e) {
+      return ApiResult.failure(ErrorHandler.handle(e));
+    }
+  }
+
+  deleteImagFromStorage(String img) async {
+    try {
+      if (img.isEmpty) {
+        return;
+      }
+      Reference oldImageRef = storage.refFromURL(img);
+      await oldImageRef.delete();
+    } catch (e) {
+      return;
+    }
   }
 }

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../helpers/extensions.dart';
@@ -51,7 +52,7 @@ Future appDeleteAlertBottomSheet({
                     textColor: Colors.white,
                     iconColor: Colors.white,
                     icon: Icons.delete_outline_rounded,
-                    title: 'Delete',
+                    title: 'delete'.tr(context: context),
                     onTap: () {
                       context.pop();
                       onTapAction!();
@@ -61,9 +62,9 @@ Future appDeleteAlertBottomSheet({
                 horizontalSpace(10),
                 Expanded(
                   child: AlertButton(
-                    borderColor: ColorsManager.secondaryColor,
+                    borderColor: ColorsManager.mainBoldColor,
                     icon: Icons.close,
-                    title: 'Close',
+                    title: 'cancel'.tr(context: context),
                     onTap: () {
                       context.pop();
                     },

@@ -8,6 +8,8 @@ class AppCashe {
   static int chats = 0;
   static int userData = 0;
   static int groups = 0;
+  static int manufactureYear = 0;
+  static int carType = 0;
 
   //! reset
   static void reset() {
@@ -20,6 +22,8 @@ class AppCashe {
     chats = 0;
     userData = 0;
     groups = 0;
+    manufactureYear = 0;
+    carType = 0;
   }
 
   //! Posts
@@ -102,5 +106,25 @@ class AppCashe {
 
   static bool isGroupsCashed() {
     return groups == 1 ? true : false;
+  }
+
+  //! manufactureYear
+
+  static void casheManufactureYear() {
+    manufactureYear = 1;
+  }
+
+  static bool isManufactureYearCashed() {
+    return manufactureYear == 1 ? true : false;
+  }
+
+  //! carType
+
+  static void casheCarType() {
+    carType = 1;
+  }
+
+  static bool isCarTypeCashed() {
+    return carType == 1 ? true : false;
   }
 }

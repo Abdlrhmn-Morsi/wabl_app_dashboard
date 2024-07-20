@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart.';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wabl_app_dashboard/core/theming/colors.dart';
-import 'package:wabl_app_dashboard/core/widgets/app_global_app_bar.dart';
 import 'package:wabl_app_dashboard/core/widgets/app_text_button.dart';
 import 'package:wabl_app_dashboard/core/widgets/app_text_field.dart';
 import 'package:wabl_app_dashboard/core/widgets/app_text_with_action.dart';
@@ -15,6 +14,7 @@ import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theming/styles.dart';
 import '../../../../core/widgets/app_image_holder.dart';
 import '../../bloc_liteners/create_group_bloc_listener.dart';
+import '../widgets/group_app_bar.dart';
 
 class AddGroupScreen extends StatefulWidget {
   final bool isUpdate;
@@ -34,7 +34,11 @@ class _AddGroupScreenState extends State<AddGroupScreen> {
   @override
   void initState() {
     super.initState();
-    CreateGroupCubit.get.initData(widget.group);
+    if (widget.isUpdate) {
+      CreateGroupCubit.get.initData(widget.group);
+    } else {
+      CreateGroupCubit.get.resetData();
+    }
   }
 
   @override
@@ -54,11 +58,10 @@ class _AddGroupScreenState extends State<AddGroupScreen> {
                   child: Column(
                     children: [
                       //? Bloc Listeners
-                      CreateGroupBlocListener(
-                        isUpdate: widget.isUpdate,
-                      ),
+                      const CreateGroupBlocListener(),
                       verticalSpace(20),
-                      AppGlobalAppBar(
+                      GroupAppBar(
+                          isUpdate: widget.isUpdate,
                           title: widget.isUpdate
                               ? 'update_group'.tr(context: context)
                               : 'add_group'.tr(context: context)),

@@ -107,11 +107,26 @@
 "group_description":"وصف المجموعة",
 "create":"أنشاء",
 "group_updated_successfuly":"تم تحديث المجموعة بنجاح",
-"update_group":"تحديث المجموعة"
-
-
-
-
+"update_group":"تحديث المجموعة",
+"are_you_sure_you_want_to_delete_this_group":"هل أنت متاكد من حذف هذه المجموعة؟",
+"group_deleted_successfuly":"تم حذف المجموعة بنجاح",
+"ad_settings":"اعدادات الاعلان",
+"manufacture_year":"سنة الصنع",
+"update_manufacture_year":"تحديث سنة الصنع",
+"add_manufacture_year":"اضافة سنة الصنع",
+"no_manufacture_year":"لا يوجد سنة الصنع",
+"are_you_sure_you_want_to_delete_this_manufacture_year":"هل أنت متاكد من حذف هذه سنة الصنع؟",
+"manufacture_year_created_successfuly":"تم انشاء سنة الصنع بنجاح",
+"manufacture_year_updated_successfuly":"تم تحديث سنة الصنع بنجاح",
+"manufacture_year_deleted_successfuly":"تم حذف سنة الصنع بنجاح",
+"car_type":"نوع السيارة",
+"no_car_types":"لا يوجد نوعات السيارات",
+"are_you_sure_you_want_to_delete_this_car_type":"هل أنت متاكد من حذف هذا النوع؟",
+"update_car_type":"تحديث نوع السيارة",
+"create_car_type":"اضافة نوع السيارة",
+"car_type_created_successfuly":"تم انشاء نوع السيارة بنجاح",
+"car_type_updated_successfuly":"تم تحديث نوع السيارة بنجاح",
+"car_type_deleted_successfuly":"تم حذف نوع السيارة بنجاح"
 
 
 

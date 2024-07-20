@@ -24,4 +24,6 @@ class AppImages {
   static const filter = 'assets/icons/filter.png';
 
   static const logoNameDashboard = 'assets/icons/logo_name_dashboard.png';
+  static const car = 'assets/icons/car.png';
+  static const calendar = 'assets/icons/calendar.png';
 }

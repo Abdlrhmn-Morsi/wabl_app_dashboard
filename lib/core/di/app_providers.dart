@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wabl_app_dashboard/features/group/logic/create_group_cubit.dart';
 import 'package:wabl_app_dashboard/features/group/logic/update_group_cubit.dart';
+import 'package:wabl_app_dashboard/features/post_settings/logic/car_type_cubit.dart';
 import 'package:wabl_app_dashboard/features/users/logic/employee_cubit.dart';
 import 'package:wabl_app_dashboard/features/users/logic/role_cubit.dart';
 import 'package:wabl_app_dashboard/features/users/logic/user_cubit.dart';
@@ -15,6 +16,7 @@ import '../../features/post/logic/current_user_posts_cubit.dart';
 import '../../features/post/logic/post_cubit.dart';
 import '../../features/post/logic/post_viewer_cubit.dart';
 import '../../features/post/logic/update_post_cubit.dart';
+import '../../features/post_settings/logic/manufacture_year_cubit.dart';
 import '../../features/profile/logic/profile_cubit.dart';
 import '../../features/profile/logic/update_password_cubit.dart';
 import '../../features/statistics/logic/statistics_cubit.dart';
@@ -92,6 +94,14 @@ List<BlocProvider> appProviders() {
     ),
     BlocProvider<UpdateGroupCubit>(
       create: (context) => getIt<UpdateGroupCubit>(),
+    ),
+    //* manufactureYear
+    BlocProvider<ManufactureYearCubit>(
+      create: (context) => getIt<ManufactureYearCubit>(),
+    ),
+    //* car type
+    BlocProvider<CarTypeCubit>(
+      create: (context) => getIt<CarTypeCubit>(),
     ),
   ];
 }

@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wabl_app_dashboard/features/group/ui/group_screen.dart';
+import 'package:wabl_app_dashboard/features/post_settings/ui/post_settings_screen.dart';
 
 import '../../../../core/helpers/app_images.dart';
 import '../../../../core/helpers/extensions.dart';
@@ -34,6 +35,13 @@ class SettingsOptions extends StatelessWidget {
           title: 'groups'.tr(context: context),
           onTap: () {
             const GroupScreen().goOnWidget(context);
+          },
+        ),
+        verticalSpace(15),
+        SettingsOptionItem(
+          title: 'ad_settings'.tr(context: context),
+          onTap: () {
+            const PostSettingsScreen().goOnWidget(context);
           },
         ),
         verticalSpace(15),

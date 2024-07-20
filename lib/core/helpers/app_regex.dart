@@ -16,6 +16,14 @@ class AppRegex {
     return message;
   }
 
+  static String? checkNotEmpty(String? value) {
+    String? message;
+    if (value!.isEmpty) {
+      message = 'filed_cannot_be_empty'.tr();
+    }
+    return message;
+  }
+
   static String? emailValidation(String? value) {
     RegExp emailRegex = RegExp(r'^\w+@gmail\.com$');
     String? message;
