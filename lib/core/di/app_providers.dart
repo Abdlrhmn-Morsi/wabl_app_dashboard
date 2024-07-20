@@ -1,4 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wabl_app_dashboard/features/group/logic/create_group_cubit.dart';
+import 'package:wabl_app_dashboard/features/group/logic/update_group_cubit.dart';
 import 'package:wabl_app_dashboard/features/users/logic/employee_cubit.dart';
 import 'package:wabl_app_dashboard/features/users/logic/role_cubit.dart';
 import 'package:wabl_app_dashboard/features/users/logic/user_cubit.dart';
@@ -8,6 +10,7 @@ import '../../features/auth/logic/signup_cubit.dart';
 import '../../features/bottom_nav_bar/logic/bottom_nav_bar_cubit.dart';
 import '../../features/category/logic/category_cubit.dart';
 import '../../features/chat/logic/chat_cubit.dart';
+import '../../features/group/logic/group_cubit.dart';
 import '../../features/post/logic/current_user_posts_cubit.dart';
 import '../../features/post/logic/post_cubit.dart';
 import '../../features/post/logic/post_viewer_cubit.dart';
@@ -79,6 +82,16 @@ List<BlocProvider> appProviders() {
     //* dark mode
     BlocProvider<ChangeThemeCubit>(
       create: (context) => getIt<ChangeThemeCubit>(),
+    ),
+    //* Group
+    BlocProvider<GroupCubit>(
+      create: (context) => getIt<GroupCubit>(),
+    ),
+    BlocProvider<CreateGroupCubit>(
+      create: (context) => getIt<CreateGroupCubit>(),
+    ),
+    BlocProvider<UpdateGroupCubit>(
+      create: (context) => getIt<UpdateGroupCubit>(),
     ),
   ];
 }

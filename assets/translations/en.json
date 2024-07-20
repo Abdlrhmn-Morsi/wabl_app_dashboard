@@ -92,7 +92,19 @@
 "please_confirm_your_password":"Please confirm your password",
 "please_enter_valid_phone_number":"Please enter valid phone number",
 "see_more":"see more ...",
-"see_less":"see less ..."
+"see_less":"see less ...",
+"groups":"Groups",
+"add_group":"Add Group",
+"group_name":"Group Name",
+"cover":"Cover",
+"avatar":"Avatar",
+"required_field":"Required Field",
+"group_created_successfuly":"Group created successfuly",
+"no_groups":"No groups",
+"group_description":"Group Description",
+"create":"Create",
+"group_updated_successfuly":"Group updated successfuly",
+"update_group":"Update Group"
 
 
 }

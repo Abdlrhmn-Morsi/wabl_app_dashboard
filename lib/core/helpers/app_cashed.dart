@@ -7,6 +7,7 @@ class AppCashe {
   static int saveds = 0;
   static int chats = 0;
   static int userData = 0;
+  static int groups = 0;
 
   //! reset
   static void reset() {
@@ -18,6 +19,7 @@ class AppCashe {
     postsStatistic = 0;
     chats = 0;
     userData = 0;
+    groups = 0;
   }
 
   //! Posts
@@ -90,5 +92,15 @@ class AppCashe {
 
   static bool isUserDataCashed() {
     return userData == 1 ? true : false;
+  }
+
+  //! groups
+
+  static void casheGroups() {
+    groups = 1;
+  }
+
+  static bool isGroupsCashed() {
+    return groups == 1 ? true : false;
   }
 }

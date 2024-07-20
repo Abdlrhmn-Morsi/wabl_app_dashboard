@@ -95,7 +95,25 @@
 "please_confirm_your_password":"الرجاء تاكيد كلمة المرور",
 "please_enter_valid_phone_number":"الرجاء ادخال رقم هاتف صالح",
 "see_more":"المزيد ...",
-"see_less":"تقليل ..."
+"see_less":"تقليل ...",
+"groups":"المجموعات",
+"add_group":"اضافة مجموعة",
+"group_name":"اسم المجموعة",
+"cover":"الغلاف",
+"avatar":"الصورة الشخصية",
+"required_field":"الحقل مطلوب",
+"group_created_successfuly":"تم انشاء المجموعة بنجاح",
+"no_groups":"لا توجد مجموعات",
+"group_description":"وصف المجموعة",
+"create":"أنشاء",
+"group_updated_successfuly":"تم تحديث المجموعة بنجاح",
+"update_group":"تحديث المجموعة"
+
+
+
+
+
+
 
 
 }

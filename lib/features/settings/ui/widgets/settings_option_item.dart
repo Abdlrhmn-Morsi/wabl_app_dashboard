@@ -20,8 +20,8 @@ class SettingsOptionItem extends StatelessWidget {
         children: [
           Text(title, style: TextStyles.font16Medium),
           Icon(
-            Icons.keyboard_arrow_right_outlined,
-            size: 25.w,
+            Icons.arrow_forward_ios,
+            size: 20.w,
           ),
         ],
       ),
