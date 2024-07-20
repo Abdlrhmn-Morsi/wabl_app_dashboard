@@ -126,7 +126,10 @@
 "create_car_type":"اضافة نوع السيارة",
 "car_type_created_successfuly":"تم انشاء نوع السيارة بنجاح",
 "car_type_updated_successfuly":"تم تحديث نوع السيارة بنجاح",
-"car_type_deleted_successfuly":"تم حذف نوع السيارة بنجاح"
+"car_type_deleted_successfuly":"تم حذف نوع السيارة بنجاح",
+"group":"المجموعة",
+"price":"السعر"
+
 
 
 

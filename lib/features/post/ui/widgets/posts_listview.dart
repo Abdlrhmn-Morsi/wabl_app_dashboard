@@ -70,6 +70,8 @@ class _PostsListviewState extends State<PostsListview> {
                           padding: EdgeInsets.only(
                             top: 10.h,
                             bottom: 20.h,
+                            left: 2.w,
+                            right: 2.w,
                           ),
                           separatorBuilder: (_, i) => Padding(
                             padding: EdgeInsets.symmetric(vertical: 10.h),

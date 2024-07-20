@@ -88,4 +88,9 @@ class GroupCubit extends Cubit<GroupState> {
     isReachedEnd = false;
     groupsList.clear();
   }
+
+  Future<GroupModel> getGroup(String id) async {
+    var response = await groupsCol.doc(id).get();
+    return GroupModel.fromDocumentSnapshot(response);
+  }
 }

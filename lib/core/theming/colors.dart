@@ -6,7 +6,7 @@ class ColorsManager {
   static const Color mainSemiBoldColor = Color(0xFF8b9dc3);
   static const Color mainSemiLightColor = Color(0xFFdfe3ee);
 
-  static const Color secondaryColor = Color(0xFF32CD32);
+  static const Color secondaryColor = Color(0xFfFF7F3E);
   static const Color thirdColor = Color(0xFF4169E1);
   //?---------------------------------------------------------
   static const Color gray = Color(0xFF757575);

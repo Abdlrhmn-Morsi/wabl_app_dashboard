@@ -123,5 +123,7 @@
 "create_car_type":"Create Car Type",
 "car_type_created_successfuly":"Car type created successfuly",
 "car_type_updated_successfuly":"Car type updated successfuly",
-"car_type_deleted_successfuly":"Car type deleted successfuly"
+"car_type_deleted_successfuly":"Car type deleted successfuly",
+"group":"Group",
+"price":"Price"
 }

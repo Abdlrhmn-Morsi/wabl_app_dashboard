@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import '../../group/data/goup_model.dart';
+
 class PostResponseBody {
   String? id;
   String? relatedToId;
@@ -7,21 +9,35 @@ class PostResponseBody {
   List<String>? images;
   PostOwner? postOwner;
   bool? isSaved;
+  bool? isFavorite;
   int? viewCount;
+  int? favoriteCount;
   Timestamp? createdAt;
   String? categoryId;
+  String? carType;
+  String? manufactureYear;
+  String? price;
+  GroupModel? group;
+  String? groupId;
   bool? isEnabled;
   PostResponseBody({
-    this.postOwner,
     this.id,
     required this.relatedToId,
     required this.content,
-    required this.createdAt,
     required this.images,
+    this.postOwner,
     this.isSaved = false,
+    this.isFavorite = false,
+    this.isEnabled = false,
     this.viewCount = 0,
+    this.favoriteCount = 0,
+    required this.createdAt,
     this.categoryId,
-    this.isEnabled,
+    this.carType,
+    this.manufactureYear,
+    this.price,
+    this.group,
+    this.groupId,
   });
   PostResponseBody.fromMapQueryDocumentSnapshot(
     QueryDocumentSnapshot<Map<String, dynamic>> doc,
@@ -32,7 +48,11 @@ class PostResponseBody {
     images = List<String>.from(doc['images']);
     createdAt = doc['created_at'];
     viewCount = doc['view_count'];
-    categoryId = doc['category_id'];
+    favoriteCount = doc['favorite_count'];
+    carType = doc['car_type'];
+    manufactureYear = doc['manufacture_year'];
+    price = doc['price'];
+    groupId = doc['group_id'];
     isEnabled = doc['is_enabled'];
   }
   PostResponseBody.fromDocumentSnapshot(
@@ -44,7 +64,11 @@ class PostResponseBody {
     images = List<String>.from(doc['images']);
     createdAt = doc['created_at'];
     viewCount = doc['view_count'];
-    categoryId = doc['category_id'];
+    carType = doc['car_type'];
+    manufactureYear = doc['manufacture_year'];
+    price = doc['price'];
+    groupId = doc['group_id'];
+    favoriteCount = doc['favorite_count'];
     isEnabled = doc['is_enabled'];
   }
 }

@@ -5,6 +5,7 @@ import '../../../core/helpers/app_cashed.dart';
 import '../../../core/networking/api_result.dart';
 import '../../../core/networking/error_handling/api_error_handler.dart';
 import '../../auth/logic/auth_helper.dart';
+import '../../group/logic/group_cubit.dart';
 import '../data/post_response_body.dart';
 import 'post_state.dart';
 import 'post_viewer_cubit.dart';
@@ -116,6 +117,9 @@ class PostCubit extends Cubit<PostState> {
   void emitIncreaseViewCountAndCheckSaved() async {
     emit(const PostState.initial());
     for (var post in postsList) {
+      post.group = await GroupCubit.get.getGroup(
+        post.groupId ?? "",
+      );
       await postViewerCubit.emitIncreaseViewCount(
         postId: post.id ?? "",
         post: post,

@@ -2,6 +2,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wabl_app_dashboard/features/auth/logic/auth_helper.dart';
 import 'package:wabl_app_dashboard/features/group/ui/group_screen.dart';
 import 'package:wabl_app_dashboard/features/post_settings/ui/post_settings_screen.dart';
 
@@ -31,20 +32,27 @@ class SettingsOptions extends StatelessWidget {
         //   title: 'settings'.tr(context: context),
         // ),
         // verticalSpace(20),
-        SettingsOptionItem(
-          title: 'groups'.tr(context: context),
-          onTap: () {
-            const GroupScreen().goOnWidget(context);
-          },
-        ),
-        verticalSpace(15),
-        SettingsOptionItem(
-          title: 'ad_settings'.tr(context: context),
-          onTap: () {
-            const PostSettingsScreen().goOnWidget(context);
-          },
-        ),
-        verticalSpace(15),
+        AuthHelper.isSuperAdmin()
+            ? Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SettingsOptionItem(
+                    title: 'groups'.tr(context: context),
+                    onTap: () {
+                      const GroupScreen().goOnWidget(context);
+                    },
+                  ),
+                  verticalSpace(15),
+                  SettingsOptionItem(
+                    title: 'ad_settings'.tr(context: context),
+                    onTap: () {
+                      const PostSettingsScreen().goOnWidget(context);
+                    },
+                  ),
+                  verticalSpace(15),
+                ],
+              )
+            : SizedBox.shrink(),
         SettingsOptionItem(
           title: 'about_us'.tr(context: context),
           onTap: () {
