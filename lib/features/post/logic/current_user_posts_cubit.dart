@@ -4,6 +4,7 @@ import '../../../core/di/dependency_injection.dart';
 import '../../../core/networking/api_result.dart';
 import '../../../core/networking/error_handling/api_error_handler.dart';
 import '../../auth/logic/auth_helper.dart';
+import '../../group/logic/group_cubit.dart';
 import '../data/post_response_body.dart';
 import 'current_user_posts_state.dart';
 
@@ -105,6 +106,7 @@ class CurrentUserPostsCubit extends Cubit<CurrentUserPostsState> {
 
         isLoadingMore = false;
         emit(CurrentUserPostsState.success(postsList));
+        await initRealtion();
       },
       failure: (error) {
         isLoadingMore = false;
@@ -115,5 +117,15 @@ class CurrentUserPostsCubit extends Cubit<CurrentUserPostsState> {
         );
       },
     );
+  }
+
+  Future initRealtion() async {
+    emit(const CurrentUserPostsState.initial());
+    for (var post in postsList) {
+      post.group = await GroupCubit.get.getGroup(
+        post.groupId ?? "",
+      );
+    }
+    emit(CurrentUserPostsState.success(postsList));
   }
 }

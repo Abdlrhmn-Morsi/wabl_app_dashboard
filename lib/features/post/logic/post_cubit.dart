@@ -99,7 +99,7 @@ class PostCubit extends Cubit<PostState> {
           isLoadingMore = false;
           emit(PostState.success(postsList));
           //! increase view count
-          emitIncreaseViewCountAndCheckSaved();
+          await emitIncreaseViewCountAndCheckSaved();
         },
         failure: (error) {
           isLoadingMore = false;
@@ -114,12 +114,14 @@ class PostCubit extends Cubit<PostState> {
     }
   }
 
-  void emitIncreaseViewCountAndCheckSaved() async {
+  Future emitIncreaseViewCountAndCheckSaved() async {
     emit(const PostState.initial());
     for (var post in postsList) {
-      post.group = await GroupCubit.get.getGroup(
-        post.groupId ?? "",
-      );
+      if (post.groupId != null && post.groupId!.isNotEmpty) {
+        post.group = await GroupCubit.get.getGroup(
+          post.groupId ?? "",
+        );
+      }
       await postViewerCubit.emitIncreaseViewCount(
         postId: post.id ?? "",
         post: post,
